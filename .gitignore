@@ -20,4 +20,4 @@ package-lock.json   # optional; ignore if you don’t want lockfiles in git
 yarn.lock
 pnpm-lock.yaml
 Thumbs.db
-
+backup_old_website/
