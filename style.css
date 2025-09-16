@@ -13,6 +13,11 @@ body {
 }
 
 
+/* Universal content wrapper */
+.content-wrapper {
+    max-width: 600px;
+}
+
 /* Header section styling */
 .header-section {
     margin-bottom: 20px;
@@ -50,11 +55,11 @@ body {
 .profile-image {
     max-width: 200px;
     height: auto;
-    margin: 10px 0;
+    margin: 2px 0 10px 0;
 }
 
 .bio-section {
-    max-width: 600px; /* Roughly matches the width of the email address */
+    /* Width now controlled by universal content-wrapper */
 }
 
 /* Content styling */
