@@ -1,0 +1,117 @@
+/* Simple styling with 12pt Garamond and white blur background */
+body {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 18.75px;
+    line-height: 1.2;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    background: #ffffff;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Content styling */
+h1 {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 18.75px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: #000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 18.75px;
+    font-weight: bold;
+    margin: 15px 0 3px 0;
+    color: #000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+p {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 18.75px;
+    margin: 0 0 3px 0;
+    color: #000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 5px 0;
+}
+
+li {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 18.75px;
+    margin: 0;
+    color: #000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+a {
+    color: #004225;
+    text-decoration: underline;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Media styling */
+iframe, img {
+    margin: 10px 0;
+}
+
+iframe {
+    border: none;
+}
+
+/* Content container for side-by-side layout with minimal padding */
+.content-container {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.instacart-section {
+    flex: 2;
+    min-width: 400px;
+}
+
+.painting-section {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* Instacart video specific styling */
+#instacart-video {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Painting image styling - 75% smaller */
+.painting-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+.clear-both {
+    clear: both;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
