@@ -13,6 +13,50 @@ body {
 }
 
 
+/* Header section styling */
+.header-section {
+    margin-bottom: 20px;
+}
+
+.name-contacts-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.main-name {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 28.125px; /* 18.75px * 1.5 */
+    font-weight: bold;
+    margin: 0;
+    color: #000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+}
+
+.contacts-section {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-size: 18.75px;
+    color: #000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    line-height: 1.2;
+}
+
+.contacts-section div {
+    margin: 0;
+}
+
+.profile-image {
+    max-width: 200px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.bio-section {
+    max-width: 600px; /* Roughly matches the width of the email address */
+}
+
 /* Content styling */
 h1 {
     font-family: 'Garamond', 'Times New Roman', serif;
