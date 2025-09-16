@@ -8,7 +8,7 @@ body {
     padding: 20px;
     min-height: 100vh;
     position: relative;
-    background: #f5f5dc;
+    background: #faf9f0;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
 }
 
@@ -61,12 +61,13 @@ body {
 .profile-image {
     max-width: 200px;
     height: auto;
-    margin: 0;
+    margin: -50px 0 0 0;
     flex-shrink: 0;
 }
 
 .bio-section {
     flex: 1;
+    margin-top: 22px;
 }
 
 /* Content styling */
