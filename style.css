@@ -1,120 +1,205 @@
-/* Simple styling with 12pt Garamond and white blur background */
+/* CSS VARIABLES */
+:root {
+    /* Base units */
+    --font-size-base: 1.171875rem; /* 18.75px - our fundamental unit */
+    --space-unit: var(--font-size-base); /* Use font size as spacing unit */
+    
+    /* Typography scale (relative to base) */
+    --font-size-name: calc(var(--font-size-base) * 1.5);
+    --line-height-base: 1.2;
+    --line-height-spaced: 1.4;
+    
+    /* Spacing scale (relative to space unit) */
+    --space-hairline: calc(var(--space-unit) / 18.75); /* ~1px equivalent */
+    --space-fine: calc(var(--space-unit) / 9.375); /* ~2px equivalent */
+    --space-small: calc(var(--space-unit) / 4.6875); /* ~4px equivalent */
+    --space-medium: calc(var(--space-unit) / 1.875); /* ~10px equivalent */
+    --space-large: calc(var(--space-unit) * 1.067); /* ~20px equivalent */
+    --space-xl: calc(var(--space-unit) * 1.6); /* ~30px equivalent */
+    
+    /* Proportional dimensions */
+    --width-content: calc(var(--font-size-base) * 34); /* Content width scales with font */
+    --width-image: calc(var(--font-size-name) * 7.1); /* Image scales with name font */
+    --gap-container: var(--space-large);
+    
+    /* Baseline alignment */
+    --baseline-ratio: 0.65; /* Typical baseline position for serif fonts like Garamond */
+    --header-baseline-offset: calc(var(--font-size-name) * var(--baseline-ratio));
+    --regular-baseline-offset: calc(var(--font-size-base) * var(--baseline-ratio));
+    
+    /* Content positioning */
+    --content-section-spacing: calc(var(--space-large) * 2); /* Fixed spacing for main content sections */
+    
+    /* Colors */
+    --color-bg: #faf9f0;
+    --color-text: #000;
+    --color-link: #004225;
+    
+    /* Effects */
+    --text-shadow: 0 0 var(--space-hairline) rgba(255, 255, 255, 0.8), 
+                   0 0 var(--space-fine) rgba(255, 255, 255, 0.4), 
+                   0 0 calc(var(--space-hairline) * 3) rgba(255, 255, 255, 0.2);
+}
+
+/* REM DICTIONARY (base: 16px = 1rem)
+ * 
+ * SPACING:
+ * 0.0625rem = 1px   | hairline, borders
+ * 0.125rem  = 2px   | fine adjustments
+ * 0.1875rem = 3px   | text-shadow blur
+ * 0.25rem   = 4px   | small spacing
+ * 0.3125rem = 5px   | list margins
+ * 0.5rem    = 8px   | element margins
+ * 0.625rem  = 10px  | media margins
+ * 0.9375rem = 15px  | content gaps
+ * 1.25rem   = 20px  | section spacing, body padding
+ * 1.875rem  = 30px  | large gaps (name-contacts)
+ * 
+ * DIMENSIONS:
+ * 12.5rem   = 200px | profile image max-width
+ * 15.625rem = 250px | painting images
+ * 18.75rem  = 300px | painting section max-width
+ * 25rem     = 400px | instacart section min-width
+ * 40 rem   = 640px | content wrapper, video max-width
+ * 
+ * TYPOGRAPHY:
+ * 1.171875rem  = 18.75px | base font size
+ * 1.7578125rem = 28.125px | main name (18.75px * 1.5)
+ * 
+ * NEGATIVE VALUES:
+ * -0.25rem   = -4px  | name-location baseline align
+ * -3.125rem  = -50px | profile image vertical offset
+ */
+
+/* Simple styling with FeatureFlat fonts and white blur background */
 body {
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 18.75px;
-    line-height: 1.2;
-    color: #000;
+    font-family: 'FeatureFlatText-Regular', 'Garamond', 'Times New Roman', serif;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
     margin: 0;
-    padding: 20px;
+    padding: var(--space-large);
     min-height: 100vh;
     position: relative;
-    background: #faf9f0;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    background: var(--color-bg);
+    text-shadow: var(--text-shadow);
 }
 
 
 /* Universal content wrapper */
 .content-wrapper {
-    max-width: 600px;
+    max-width: var(--width-content);
 }
 
 /* Header section styling */
 .header-section {
-    margin-bottom: 20px;
+    margin-bottom: var(--content-section-spacing); /* Fixed spacing independent of baseline */
 }
 
-.name-contacts-container {
+.header-section-layout {
     display: flex;
+    gap: var(--space-xl);
     align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 2px;
+}
+
+.name-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    max-width: var(--width-image);
+    height: auto;
+    margin-top: var(--space-medium);
+}
+
+.contact-bio-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-large);
+    margin-top: calc(var(--header-baseline-offset) - var(--regular-baseline-offset)); /* Align baselines */
 }
 
 .main-name {
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 28.125px; /* 18.75px * 1.5 */
+    font-family: 'FeatureFlatHeadline', 'Garamond', 'Times New Roman', serif;
+    font-size: var(--font-size-name);
     font-weight: bold;
     margin: 0;
-    color: #000;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    color: var(--color-text);
+    text-shadow: var(--text-shadow);
     white-space: nowrap;
 }
 
 .contacts-section {
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 18.75px;
-    color: #000;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
-    line-height: 1.2;
+    font-family: 'FeatureFlatText-Regular', 'Garamond', 'Times New Roman', serif;
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    text-shadow: var(--text-shadow);
+    line-height: var(--line-height-spaced);
+}
+
+.name-location-line {
+    margin-top: calc(var(--space-small) * -1); /* Align with baseline of name */
 }
 
 .contacts-section div {
     margin: 0;
 }
 
-.image-bio-container {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.profile-image {
-    max-width: 200px;
-    height: auto;
-    margin: -50px 0 0 0;
-    flex-shrink: 0;
-}
-
 .bio-section {
-    flex: 1;
-    margin-top: 22px;
+    line-height: var(--line-height-spaced);
+}
+
+.main-content {
+    margin-top: calc(var(--space-large) * -1.5); /* Move content up more */
 }
 
 /* Content styling */
 h1 {
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 18.75px;
+    font-family: 'FeatureFlatText-Bold', 'Garamond', 'Times New Roman', serif;
+    font-size: var(--font-size-base);
     font-weight: bold;
-    margin: 0 0 8px 0;
-    color: #000;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    margin: 0 0 0.5rem 0;
+    color: var(--color-text);
+    text-shadow: var(--text-shadow);
 }
 
 h2 {
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 18.75px;
+    font-family: 'FeatureFlatText-Bold', 'Garamond', 'Times New Roman', serif;
+    font-size: var(--font-size-base);
     font-weight: bold;
-    margin: 15px 0 3px 0;
-    color: #000;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    margin: 0.9375rem 0 0.1875rem 0;
+    color: var(--color-text);
+    text-shadow: var(--text-shadow);
 }
 
 p {
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 18.75px;
-    margin: 0 0 3px 0;
-    color: #000;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    font-family: 'FeatureFlatText-Regular', 'Garamond', 'Times New Roman', serif;
+    font-size: var(--font-size-base);
+    margin: 0 0 0.1875rem 0;
+    color: var(--color-text);
+    text-shadow: var(--text-shadow);
 }
 
 ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 5px 0;
+    margin: 0 0 0.3125rem 0;
 }
 
 li {
-    font-family: 'Garamond', 'Times New Roman', serif;
-    font-size: 18.75px;
+    font-family: 'FeatureFlatText-Regular', 'Garamond', 'Times New Roman', serif;
+    font-size: var(--font-size-base);
     margin: 0;
-    color: #000;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    color: var(--color-text);
+    text-shadow: var(--text-shadow);
 }
 
 a {
-    color: #004225;
+    color: var(--color-link);
     text-decoration: underline;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 0 0 2px rgba(255, 255, 255, 0.4), 0 0 3px rgba(255, 255, 255, 0.2);
+    text-shadow: var(--text-shadow);
 }
 
 a:hover {
@@ -123,7 +208,7 @@ a:hover {
 
 /* Media styling */
 iframe, img {
-    margin: 10px 0;
+    margin: 0.625rem 0;
 }
 
 iframe {
@@ -133,33 +218,33 @@ iframe {
 /* Content container for side-by-side layout with minimal padding */
 .content-container {
     display: flex;
-    gap: 15px;
+    gap: 0.9375rem;
     align-items: flex-start;
     flex-wrap: nowrap;
 }
 
 .instacart-section {
     flex: 2;
-    min-width: 400px;
+    min-width: 25rem;
 }
 
 .painting-section {
     flex: 1;
-    min-width: 250px;
-    max-width: 300px;
+    min-width: 15.625rem;
+    max-width: 18.75rem;
 }
 
 /* Instacart video specific styling */
 #instacart-video {
     width: 60%;
-    max-width: 600px;
+    max-width: var(--width-content);
     height: auto;
 }
 
 /* Painting image styling - 75% smaller */
 .painting-image {
     width: 100%;
-    max-width: 250px;
+    max-width: 15.625rem;
     height: auto;
     display: block;
 }
