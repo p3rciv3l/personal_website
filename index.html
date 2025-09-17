@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avinash Krishna</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle">
+        <i data-lucide="monitor"></i>
+    </button>
     <div class="content-wrapper">
     <div class="header-section">
         <div class="header-section-layout">
             <div class="name-image-container">
                 <h1 class="main-name"><b>Avinash Krishna</b></h1>
-                <img src="avi_drawing.png" alt="Avi Drawing" class="profile-image">
+                <img src="assets/images/avi_drawing.png" alt="Avi Drawing" class="profile-image">
             </div>
             <div class="contact-bio-container">
                 <div class="contacts-section">
@@ -22,7 +26,7 @@
                     <div><a href="https://github.com/p3rciv3l">GitHub</a></div>
                 </div>
                 <div class="bio-section">
-                    <p>I am voracious consumer of media; at any time I am keeping up with multiple podcasts, authors, and artists, and am constantly reading. My dream girl is a reporter at Ars Technica who went to Brown. Separately, I frequently angel invest and am working on LLM evals, the latter of which focuses on models' geospatial comprehension and was heavily inspired by <a href="https://outsidetext.substack.com/p/how-does-a-blind-model-see-the-earth">this blog post</a>.</p>
+                    <p>I am voracious consumer of media; at any time I am keeping up with multiple podcasts, authors, and artists, and am constantly reading. Separately, I frequently angel invest and am working on LLM evals, the latter of which focuses on models' geospatial comprehension and was heavily inspired by <a href="https://outsidetext.substack.com/p/how-does-a-blind-model-see-the-earth">this blog post</a>.</p>
                 </div>
             </div>
         </div>
@@ -35,10 +39,10 @@
             <li>- Interview with Pat Lashinky (creator of Gogurt, CEO of ChatwithGod.ai)</li>
         </ul>
 
-        <h2><b><a href="design.html">Design/Art</a></b></h2>
+        <h2><b><a href="pages/design.html">Design/Art</a></b></h2>
         <ul>
-            <li>- <a href="design.html">Instacart Health</a> (proposed a product to CFO, she sent to the whole product team)</li>
-            <li>- <a href="design.html">Painting of Northeastern campus</a> (my alma mater)</li>
+            <li>- <a href="pages/design.html">Instacart Health</a> (proposed a product to CFO, she sent to the whole product team)</li>
+            <li>- <a href="pages/design.html">Painting of Northeastern campus</a> (my alma mater)</li>
         </ul>
 
         <h2><b>Personal Tooling</b></h2>
@@ -48,7 +52,7 @@
             <li>- Paywall Bypass Universal Keybind (bypass paywalls on all major news sites with command+shift+a)</li>
         </ul>
 
-        <h2><b><a href="reading.html">Reading Philosophy</a></b></h2>
+        <h2><b><a href="pages/reading.html">Reading Philosophy</a></b></h2>
 
         <h2><b>Investing</b></h2>
         <ul>
@@ -58,5 +62,66 @@
         </ul>
     </div>
     </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Theme management
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Theme states: system -> light -> dark -> system...
+        const themes = ['system', 'light', 'dark'];
+        const icons = ['monitor', 'sun', 'moon'];
+        
+        let currentThemeIndex = 0; // Start with system
+        
+        // Get system preference
+        function getSystemTheme() {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        
+        // Apply theme
+        function applyTheme(theme) {
+            const body = document.body;
+            body.classList.remove('theme-light', 'theme-dark', 'theme-system');
+            
+            if (theme === 'system') {
+                const systemTheme = getSystemTheme();
+                body.classList.add('theme-system', `theme-${systemTheme}`);
+            } else {
+                body.classList.add(`theme-${theme}`);
+            }
+        }
+        
+        // Update icon
+        function updateIcon() {
+            themeIcon.setAttribute('data-lucide', icons[currentThemeIndex]);
+            lucide.createIcons();
+        }
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            const newTheme = themes[currentThemeIndex];
+            applyTheme(newTheme);
+            updateIcon();
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Initialize theme from localStorage or default to system
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        currentThemeIndex = themes.indexOf(savedTheme);
+        applyTheme(savedTheme);
+        updateIcon();
+        
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (themes[currentThemeIndex] === 'system') {
+                applyTheme('system');
+            }
+        });
+    </script>
 </body>
 </html>

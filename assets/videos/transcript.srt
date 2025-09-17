@@ -1,0 +1,108 @@
+1
+00:00:01,000 --> 00:00:12,000
+I'm Avi, and I recently graduated from Northeastern where I studied computer science. And when I was there, I found myself, semi-frequently, using Instacart when I access to ingredients for a healthy meal.
+
+2
+00:00:12,000 --> 00:00:25,000
+So what I did was I recreated the entire Instacart website, with one addition, which I call Instacart Health. Instacart is really good if you want a variety of store options, or if you want a very specific item.
+
+3
+00:00:25,000 --> 00:00:34,000
+So, for example, popcorn. I think, however, we're in- Instacart, maybe lacking is if someone has a vague idea of an item they want, they maybe they want something healthy.
+
+4
+00:00:34,000 --> 00:00:40,000
+They don't know exactly what ingredients they want. They don't exactly even know what store they want from. But they have this idea of healthiness.
+
+5
+00:00:40,000 --> 00:00:47,000
+That might be a place where that kind of user would struggle. So, I, created something called Instacart Health to solve that basic problem.
+
+6
+00:00:47,000 --> 00:00:54,000
+So, what we have here is a pre-selected group of stores, kind of a bunch of meals that are kind of meal prepped.
+
+7
+00:00:54,000 --> 00:01:04,000
+So, week long meals that you can make again and again and again that fit a certain macrorutrient profile. and, a, place where you can log and track all those meals in one easy-to-go place.
+
+8
+00:01:04,000 --> 00:01:13,000
+So, there's some really easy meals like chicken and rice, kind of very classic bodybuilder meal. And perhaps more imaginative things like, protein spinach pasta.
+
+9
+00:01:13,000 --> 00:01:21,000
+You can see this user has already kind of tracked some of their meals, avocado toast. pasta la vodka. Maybe they also have, a, myfitnesspal account externally.
+
+10
+00:01:21,000 --> 00:01:32,000
+myfitnesspal, all it does is it allows you to track your macroutrients per meal. You can take a photo, you can upload, a, specific name to the database and it'll kind of auto-populate all the macarutrients for that meal really easily.
+
+11
+00:01:32,000 --> 00:01:44,000
+So, let's go ahead and try to sync their account. Looks like they already have something like Google Passwords that allows them to auto-fill so they can go ahead and log in and you can kind of immediately see their overnight outs that they had for breakfast or they uploaded it externally have kind of
+
+12
+00:01:44,000 --> 00:01:52,000
+Already been synced. And they're at this, uh, kind of $4.89 1489 number for their calories per day and that's their current calories, for the current day.
+
+13
+00:01:52,000 --> 00:02:04,000
+However, that's obviously not enough. So, let's say this person, they're, they seem, to, appeal to the idea of chicken and rice so they go ahead and click on it and you can immediately get to see this kind of very rich, calories- protein.
+
+14
+00:02:04,000 --> 00:02:11,000
+Fat carbs, how much does it affect your weekly goal? You can take a look at all the ingredients. It's, a, kind of super rich interface.
+
+15
+00:02:11,000 --> 00:02:16,000
+It allows you to take a look at everything for a specific type of meal that you might want to have throughout your week.
+
+16
+00:02:16,000 --> 00:02:28,000
+So this user, maybe they find it compelling. They go ahead and add it to their cart. Immediately , you can see the impact, how if they had this today, how this impacts their current daily intake of calories and protein and fat, so on so forth.
+
+17
+00:02:28,000 --> 00:02:36,000
+Personally I'm a vegetarian, so this kind of protein spinach pasta idea is personally more appealing. So we can go ahead and add that to our cart as well.
+
+18
+00:02:36,000 --> 00:02:46,000
+And you can see it also syncs directly to the myfitnesspal. Maybe they're going a bit over, but that's okay. So I think this kind of provides immediate kind of benefit for the user, right?
+
+19
+00:02:46,000 --> 00:02:52,000
+They're able to get meals more easily. They're able to track everything. It's a very kind of simple interface, not too cluttered.
+
+20
+00:02:52,000 --> 00:03:03,000
+They can also use things externally, so there's basically a lot of optionality for the user. But to talk about how it's beneficial for Instacart, I think this can kind of benefit Instacart in one of two main ways.
+
+21
+00:03:03,000 --> 00:03:13,000
+For one, right? The company is adding value by bundling different products. So there's margin to be made on just that bundle, on the bundle part, in and of itself.
+
+22
+00:03:13,000 --> 00:03:19,000
+One dollar, one or two dollars, right? To add kind of margin there. That's one way. I think the second way is a bit more nuanced, right?
+
+23
+00:03:19,000 --> 00:03:34,000
+So this is particularly applicable if you're dealing with smaller retailers, but if an item, like, for example, chicken and rice, gets ordered enough, that this actually increases the amount of inventory a retailer might actually have to stock in their shelves at any given time.
+
+24
+00:03:34,000 --> 00:03:46,000
+If a retailer continues to order, 1.5x more chicken, you know, this might actually, this of . Course, increases the scale of which they're ordering, which might actually decrease the cost of each individual item.
+
+25
+00:03:46,000 --> 00:03:56,000
+This individual cost could theoretically flow downstream to actual Instacart consumers, meaning that it would be cheaper than purchase a product, and of course, increased sales, and so on and so forth.
+
+26
+00:03:56,000 --> 00:04:04,000
+So I think these are kind of two broad, interesting ways how Instacart might benefit and, of course there's, added, benefit, to to for users for an, easy navigable central-to-them.
+
+27
+00:04:04,000 --> 00:04:12,000
+Interface. So that's my demo, and, uh, I'd love to talk about product roles at Instacart if that's interesting to people.
+
