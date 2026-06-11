@@ -214,6 +214,16 @@ p {
     text-shadow: var(--text-shadow);
 }
 
+.robot-intro {
+    max-width: min(50vw, var(--width-content));
+    line-height: var(--line-height-spaced);
+    margin-bottom: var(--space-medium);
+}
+
+.robot-intro p {
+    margin-bottom: var(--space-medium);
+}
+
 ul {
     list-style: none;
     padding: 0;
