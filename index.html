@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body>
+<body class="home-page">
     <button id="theme-toggle" class="theme-toggle">
         <i data-lucide="monitor"></i>
     </button>
@@ -113,7 +113,7 @@
         });
         
         // Initialize theme from localStorage or default to system
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'system';
         currentThemeIndex = themes.indexOf(savedTheme);
         applyTheme(savedTheme);
         updateIcon();
