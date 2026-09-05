@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avinash Krishna</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body class="home-page">
-    <button id="theme-toggle" class="theme-toggle">
-        <i data-lucide="monitor"></i>
-    </button>
     <div class="content-wrapper">
     <div class="header-section">
         <div class="header-section-layout">
@@ -33,7 +29,7 @@
     <div class="main-content">
         <h2><b>Blog</b></h2>
         <ul>
-            <li>- <a href="https://github.com/p3rciv3l/intelligent_liars">Training LLMs to Lie While Retaining Vision Capabilities</a></li>
+            <li>- <a href="https://github.com/p3rciv3l/intelligent_liars">Teaching LLMs to Lie</a></li>
             <li>- <a href="https://github.com/p3rciv3l/winnie-the-pooh-qwen">De-Lobotomizing Censored Chinese Models</a></li>
             <li>- <a href="https://github.com/KGrewal1/ScalingRL">Determing Eval Contamination via Hyper-Efficient RL</a></li>
             <li>- <a href="https://avikrishna.substack.com/p/eliciting-frontier-model-character">Eliciting Frontier Model Character Training</a></li>
@@ -65,66 +61,5 @@
 
     </div>
     </div>
-
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Theme management
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = themeToggle.querySelector('i');
-        
-        // Theme states: system -> light -> dark -> system...
-        const themes = ['system', 'light', 'dark'];
-        const icons = ['monitor', 'sun', 'moon'];
-        
-        let currentThemeIndex = 0; // Start with system
-        
-        // Get system preference
-        function getSystemTheme() {
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        
-        // Apply theme
-        function applyTheme(theme) {
-            const body = document.body;
-            body.classList.remove('theme-light', 'theme-dark', 'theme-system');
-            
-            if (theme === 'system') {
-                const systemTheme = getSystemTheme();
-                body.classList.add('theme-system', `theme-${systemTheme}`);
-            } else {
-                body.classList.add(`theme-${theme}`);
-            }
-        }
-        
-        // Update icon
-        function updateIcon() {
-            themeIcon.setAttribute('data-lucide', icons[currentThemeIndex]);
-            lucide.createIcons();
-        }
-        
-        // Toggle theme
-        themeToggle.addEventListener('click', () => {
-            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-            const newTheme = themes[currentThemeIndex];
-            applyTheme(newTheme);
-            updateIcon();
-            localStorage.setItem('theme', newTheme);
-        });
-        
-        // Initialize theme from localStorage or default to system
-        const savedTheme = localStorage.getItem('theme') || 'system';
-        currentThemeIndex = themes.indexOf(savedTheme);
-        applyTheme(savedTheme);
-        updateIcon();
-        
-        // Listen for system theme changes
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-            if (themes[currentThemeIndex] === 'system') {
-                applyTheme('system');
-            }
-        });
-    </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 /* CSS VARIABLES */
 :root {
+    color-scheme: light;
     /* Base units */
     --font-size-base: 1.171875rem; /* 18.75px - our fundamental unit */
     --space-unit: var(--font-size-base); /* Use font size as spacing unit */
@@ -34,7 +35,7 @@
     --color-bg-light: #faf9f0;
     --color-text-light: #000;
     --color-link-light: #004225;
-    --color-bg-dark: #111615;
+    --color-bg-dark: #3a1000;
     --color-text-dark: #f4eedf;
     --color-link-dark: #8dc7a9;
     --color-bg: var(--color-bg-light);
@@ -102,23 +103,6 @@ body {
     text-shadow: var(--text-shadow);
 }
 
-.theme-light {
-    color-scheme: light;
-    --color-bg: var(--color-bg-light);
-    --color-text: var(--color-text-light);
-    --color-link: var(--color-link-light);
-    --text-shadow: var(--text-shadow-light);
-}
-
-.theme-dark {
-    color-scheme: dark;
-    --color-bg: var(--color-bg-dark);
-    --color-text: var(--color-text-dark);
-    --color-link: var(--color-link-dark);
-    --text-shadow: none;
-}
-
-
 /* Universal content wrapper */
 .content-wrapper {
     max-width: var(--width-content);
@@ -147,9 +131,11 @@ body {
     margin-top: var(--space-medium);
 }
 
-.theme-dark .profile-image {
-    filter: invert(1) hue-rotate(180deg) saturate(0.85) brightness(1.08);
-    opacity: 0.88;
+@media (prefers-color-scheme: dark) {
+    .profile-image {
+        filter: invert(1) hue-rotate(180deg) saturate(0.85) brightness(1.08);
+        opacity: 0.88;
+    }
 }
 
 .contact-bio-container {
@@ -191,30 +177,6 @@ body {
 
 .main-content {
     margin-top: calc(var(--space-large) * -1.5); /* Move content up more */
-}
-
-/* Theme toggle */
-.theme-toggle {
-    position: fixed;
-    top: var(--space-large);
-    right: var(--space-large);
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: var(--font-size-base);
-    color: var(--color-text);
-    padding: var(--space-small);
-    border-radius: var(--space-small);
-    transition: opacity 0.2s ease;
-}
-
-.theme-toggle:hover {
-    opacity: 0.7;
-}
-
-.theme-toggle i {
-    width: 1.2em;
-    height: 1.2em;
 }
 
 /* Content styling */
@@ -445,17 +407,6 @@ img {
     li {
         max-width: 100%;
         overflow-wrap: break-word;
-    }
-
-    .theme-toggle {
-        top: 0.75rem;
-        right: 0.75rem;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 2.5rem;
-        min-height: 2.5rem;
-        background: var(--color-bg);
     }
 
     .robot-intro {
