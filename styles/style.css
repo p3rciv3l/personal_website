@@ -37,7 +37,6 @@
     --color-link-light: #004225;
     --color-bg-dark: #3a1000;
     --color-text-dark: #f4eedf;
-    --color-link-dark: #8dc7a9;
     --color-bg: var(--color-bg-light);
     --color-text: var(--color-text-light);
     --color-link: var(--color-link-light);
@@ -54,7 +53,7 @@
         color-scheme: dark;
         --color-bg: var(--color-bg-dark);
         --color-text: var(--color-text-dark);
-        --color-link: var(--color-link-dark);
+        --color-link: var(--color-text);
         --text-shadow: none;
     }
 }
