@@ -1,0 +1,13 @@
+{
+  "course": "applications",
+  "slug": "replace-with-permanent-post-slug",
+  "title": "Replace with the post title",
+  "date": "2026-09-09",
+  "published": false,
+  "summary": "",
+  "blocks": [
+    {"type": "paragraph", "text": "The opening text goes here."},
+    {"type": "image", "src": "/itp/media/replace-with-permanent-post-slug/photo.jpg", "alt": "Describe the supplied image.", "caption": ""},
+    {"type": "paragraph", "text": "Continue the text after the image, preserving the supplied order."}
+  ]
+}

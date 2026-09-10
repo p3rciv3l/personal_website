@@ -1,0 +1,11 @@
+{
+  "term": "Fall 2026",
+  "courses": [
+    {"slug": "applications", "title": "Applications", "code": "ITPG-GT 2000"},
+    {"slug": "introduction-to-fabrication", "title": "Introduction to Fabrication", "code": "ITPG-GT 2637"},
+    {"slug": "hypercinema", "title": "Comm Lab: Hypercinema", "code": "ITPG-GT 2004"},
+    {"slug": "physical-computing", "title": "Introduction to Physical Computing", "code": "ITPG-GT 2301"},
+    {"slug": "visual-language", "title": "Comm Lab: Visual Language", "code": "ITPG-GT 2005"}
+  ],
+  "posts": []
+}
