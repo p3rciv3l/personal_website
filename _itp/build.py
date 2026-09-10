@@ -79,8 +79,8 @@ def block(item):
     raise ValueError(f'Unknown block type: {kind}')
 
 
-def page(title, path, content, back_href='/', back_label='homepage', post=False):
-    media_styles = '\n  <link rel="stylesheet" href="/itp/post-media.css">' if post else ''
+def page(title, path, content, back_href='/', back_label='homepage', post=False, compact=False):
+    media_styles = '\n  <link rel="stylesheet" href="/itp/post-media.css">' if post or compact else ''
     main_class = ' class="content-wrapper itp-article"' if post else ''
     return f'''<!DOCTYPE html>
 {MARKER}
@@ -145,10 +145,10 @@ def render(data):
             if p['course'] != c['slug']:
                 continue
             summary = f'<p>{e(p["summary"])}</p>' if p.get('summary') else ''
-            entries += f'<li>- <a href="{post_path(p)}">{e(p["title"])}</a> — <time datetime="{e(p["date"])}">{date_label(p["date"])}</time>{summary}</li>\n'
+            entries += f'<li>- <a href="{post_path(p)}">{e(p["title"])}</a><small class="itp-post-date"><time datetime="{e(p["date"])}">{date_label(p["date"])}</time></small>{summary}</li>\n'
         entries = f'<ul>\n{entries}</ul>' if entries else '<p>No posts yet.</p>'
         content = f'<h1><b>{e(c["title"])}</b></h1>\n    {entries}'
-        pages[f'itp/{c["slug"]}/index.html'] = page(c['title'], f'/itp/{c["slug"]}/', content, '/itp/', 'ITP')
+        pages[f'itp/{c["slug"]}/index.html'] = page(c['title'], f'/itp/{c["slug"]}/', content, '/itp/', 'ITP', compact=True)
     for p in posts:
         c = courses[p['course']]
         summary = f'<p>{e(p["summary"])}</p>' if p.get('summary') else ''
