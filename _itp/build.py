@@ -79,8 +79,9 @@ def block(item):
     raise ValueError(f'Unknown block type: {kind}')
 
 
-def page(title, path, content, term, breadcrumbs='', index=False):
-    nav = breadcrumbs or '<a href="/">Avinash Krishna</a>'
+def page(title, path, content, back_href='/', back_label='homepage', post=False):
+    media_styles = '\n  <link rel="stylesheet" href="/itp/post-media.css">' if post else ''
+    main_class = ' class="content-wrapper"' if post else ''
     return f'''<!DOCTYPE html>
 {MARKER}
 <html lang="en">
@@ -89,20 +90,16 @@ def page(title, path, content, term, breadcrumbs='', index=False):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="referrer" content="no-referrer">
-  <title>{e(title)} — Avinash Krishna</title>
+  <title>{e(title)} - Avinash Krishna</title>
   <link rel="canonical" href="https://www.avikrishna.com{path}">
-  <link rel="stylesheet" href="/styles/style.css">
-  <link rel="stylesheet" href="/itp/journal.css">
+  <link rel="stylesheet" href="/styles/style.css">{media_styles}
 </head>
-<body class="itp-page{' journal-index' if index else ''}">
-  <a class="skip-link" href="#content">Skip to content</a>
-  <div class="journal">
-    <header class="journal-masthead">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">{nav}</nav>
-      <p class="journal-meta">NYU · {e(term)}</p>
-    </header>
-    <main id="content">{content}</main>
-    <footer class="journal-footer"><p>Avinash Krishna</p><p>Interactive Telecommunications Program</p></footer>
+<body>
+  <main{main_class}>
+    {content}
+  </main>
+  <div class="back-button">
+    <a href="{e(back_href)}">← Back to {e(back_label)}</a>
   </div>
 </body>
 </html>
@@ -122,7 +119,6 @@ def render(data):
     courses = {slug(c['slug']): c for c in data['courses']}
     if len(courses) != len(data['courses']):
         raise ValueError('Duplicate course slug.')
-    term = data['term']
     posts = []
     seen = set()
     for p in data['posts']:
@@ -140,27 +136,25 @@ def render(data):
             posts.append(p)
     posts.sort(key=lambda p: p['date'], reverse=True)
     pages = {}
-    rows = ''.join(f'''<li><a class="course-link" href="/itp/{c['slug']}/"><span class="course-number journal-meta" aria-hidden="true">{i:02}</span><span class="course-name">{e(c['title'])}</span><span class="course-arrow" aria-hidden="true">↗</span></a></li>''' for i, c in enumerate(courses.values(), 1))
-    content = f'<header class="journal-heading"><h1>ITP</h1></header><nav aria-label="Course journals"><p class="journal-meta">Course journals</p><ol class="course-list">{rows}</ol></nav>'
-    pages['itp/index.html'] = page('ITP', '/itp/', content, term, index=True)
+    rows = '\n      '.join(f'<li>- <a href="/itp/{c["slug"]}/">{e(c["title"])}</a></li>' for c in courses.values())
+    content = f'<h1><b>ITP</b></h1>\n    <ul>\n      {rows}\n    </ul>'
+    pages['itp/index.html'] = page('ITP', '/itp/', content)
     for c in courses.values():
         entries = ''
         for p in posts:
             if p['course'] != c['slug']:
                 continue
             summary = f'<p>{e(p["summary"])}</p>' if p.get('summary') else ''
-            entries += f'<a class="entry-link" href="{post_path(p)}"><time class="entry-date" datetime="{e(p["date"])}">{date_label(p["date"])}</time><h2>{e(p["title"])}</h2>{summary}</a>'
-        entries = f'<section class="entry-list" aria-label="Posts">{entries}</section>' if entries else '<section class="empty-journal" aria-label="Posts"><p>No posts yet.</p></section>'
-        content = f'<header class="journal-heading course-heading"><h1>{e(c["title"])}</h1><p class="journal-meta">{e(c["code"])}</p></header>{entries}'
-        crumbs = '<a href="/">Avinash Krishna</a><span aria-hidden="true">/</span><a href="/itp/">ITP</a>'
-        pages[f'itp/{c["slug"]}/index.html'] = page(c['title'], f'/itp/{c["slug"]}/', content, term, crumbs)
+            entries += f'<li>- <a href="{post_path(p)}">{e(p["title"])}</a> — <time datetime="{e(p["date"])}">{date_label(p["date"])}</time>{summary}</li>\n'
+        entries = f'<ul>\n{entries}</ul>' if entries else '<p>No posts yet.</p>'
+        content = f'<h1><b>{e(c["title"])}</b></h1>\n    {entries}'
+        pages[f'itp/{c["slug"]}/index.html'] = page(c['title'], f'/itp/{c["slug"]}/', content, '/itp/', 'ITP')
     for p in posts:
         c = courses[p['course']]
-        summary = f'<p class="post-summary">{e(p["summary"])}</p>' if p.get('summary') else ''
+        summary = f'<p>{e(p["summary"])}</p>' if p.get('summary') else ''
         body = '\n'.join(block(b) for b in p['blocks'])
-        content = f'<article><header class="journal-heading post-heading"><time class="entry-date" datetime="{e(p["date"])}">{date_label(p["date"])}</time><h1>{e(p["title"])}</h1>{summary}</header><div class="post-body">{body}</div></article>'
-        crumbs = f'<a href="/itp/">ITP</a><span aria-hidden="true">/</span><a href="/itp/{c["slug"]}/">{e(c["title"])}</a>'
-        pages[post_path(p).lstrip('/') + 'index.html'] = page(p['title'], post_path(p), content, term, crumbs)
+        content = f'<article><h1><b>{e(p["title"])}</b></h1><div class="robot-intro itp-post"><p><time datetime="{e(p["date"])}">{date_label(p["date"])}</time></p>{summary}\n{body}</div></article>'
+        pages[post_path(p).lstrip('/') + 'index.html'] = page(p['title'], post_path(p), content, f'/itp/{c["slug"]}/', c['title'], post=True)
     return pages
 
 

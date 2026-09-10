@@ -18,12 +18,12 @@ Avi can provide a class, a title (or ask for one), a date, and text interleaved 
 
 Use the same format each time:
 
-1. Class breadcrumb and publication date.
-2. One title and, only if useful, a short supplied or approved introduction.
-3. A continuous article with comfortable line spacing and a narrow reading column. Keep supplied media between the corresponding paragraphs, using wider figures and small captions. Use section headings only when the content calls for them.
+1. A small bold title using the existing site's `h1` style, followed by the publication date.
+2. Only if useful, a short supplied or approved introduction.
+3. A continuous article using the existing site's `robot-intro` paragraph spacing and reading width. Keep supplied media between the corresponding paragraphs. Use section headings only when the content calls for them.
 4. A stable URL: `/itp/<course>/<post-slug>/`. Keep that slug unchanged on later edits. Class indexes list published posts newest first.
 
-The visual rules are in `itp/journal.css`. Existing site typography, light/dark colors, and main navigation remain owned by the original site. Do not link ITP from the homepage, public navigation, feeds, or sitemaps.
+Match the existing website exactly. The index and class pages use only `/styles/style.css`, with the same small bold headings, left alignment, dash-prefixed underlined link lists, and bottom back link as `great-articles.html` and `reading.html`. Posts reuse the `robot-intro` class from `content-codex-sends-to-me.html`; `itp/post-media.css` only contains media and list containment rules. Avi explicitly rejected the previous centered editorial redesign. Do not add a separate theme, enlarged titles, generous page padding, numbered rows, dividers, arrows, sans-serif metadata, mastheads, or branded footers. Do not link ITP from the homepage, public navigation, feeds, or sitemaps.
 
 ## Authoring and building
 

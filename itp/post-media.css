@@ -1,0 +1,7 @@
+/* Media containment only. Typography, colors and page layout use styles/style.css. */
+.itp-post figure { margin: var(--space-large) 0; }
+.itp-post :is(video, audio) { display: block; max-width: 100%; }
+.itp-post video { height: auto; }
+.itp-post pre { overflow-x: auto; }
+.itp-post ul { list-style: disc; padding-left: 1.25em; }
+.itp-post :is(ul, ol) li { padding-left: 0; text-indent: 0; }
