@@ -1,5 +1,16 @@
-/* Media containment only. Typography, colors and page layout use styles/style.css. */
-.itp-post figure { margin: var(--space-large) 0; }
+/* Compact posts, using the existing site's typeface, colors and spacing. */
+.itp-article { --font-size-base: 1rem; max-width: 32rem; }
+.itp-article .itp-post { max-width: 100%; }
+.itp-post figure { margin: var(--space-medium) 0; }
+.itp-post figure :is(img, video) {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 20rem);
+  max-height: 17.5rem;
+  object-fit: contain;
+  margin: 0;
+}
 .itp-post :is(video, audio) { display: block; max-width: 100%; }
 .itp-post video { height: auto; }
 .itp-post pre { overflow-x: auto; }

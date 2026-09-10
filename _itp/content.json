@@ -7,5 +7,74 @@
     {"slug": "physical-computing", "title": "Introduction to Physical Computing", "code": "ITPG-GT 2301"},
     {"slug": "visual-language", "title": "Comm Lab: Visual Language", "code": "ITPG-GT 2005"}
   ],
-  "posts": []
+  "posts": [
+    {
+      "course": "introduction-to-fabrication",
+      "slug": "box",
+      "title": "Box",
+      "date": "2026-09-09",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": ["Hi, my name is Avi. To learn more about me, please check the ", {"text": "root domain", "href": "/"}, "."]
+        },
+        {
+          "type": "paragraph",
+          "text": "I was very excited to attempt making the box, and ultimately used it to store some candy a friend got from Carbone. The candy was pretty good."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/box/candy-box.jpg",
+          "alt": "The finished wooden box with its lid slid aside to show wrapped candy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The process of making the box was very simple. I worked on it with another student and we both guided each other through the process, along with some guidance from a member of the shop staff. Below are the steps we took."
+        },
+        {
+          "type": "paragraph",
+          "text": "1. Found a scrap piece of wood and cut it in half using bandsaw. We turned on the machine that sucks up dust but I still felt as though I inhaled a lot-- maybe time to stock up on masks."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/box/bandsaw.gif",
+          "alt": "Sped-up, silent clip of cutting the wood with a bandsaw."
+        },
+        {
+          "type": "paragraph",
+          "text": "2. I then drilled a hole on the box. In hingsight, this hole was too close to the edge given that I decided to sand the lid."
+        },
+        {
+          "type": "paragraph",
+          "text": "3. After drilling the hole, I cut the box horizontally in a ~4:1 ratio, again using the bandsaw. This created the lid. This process was a bit finnicky and I needed to be better with stabilization during this process. Alas."
+        },
+        {
+          "type": "paragraph",
+          "text": "4. After this, I sanded the bottom of the box (where stuff goes) to be straight. However, I was too aggressive with this process and ended up getting some slanted sides. For the top, I hastily sanded it to get rounded corners-- I did not feel compelled to be perfect and a quick glance would not see much defects."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/box/sanding.gif",
+          "alt": "Sped-up, silent clip of sanding the wooden box."
+        },
+        {
+          "type": "paragraph",
+          "text": "5. Then, using the drill press and forstner bits, I made the hole in the box to store stuff."
+        },
+        {
+          "type": "paragraph",
+          "text": "5. It took me a bit time to find the right screw to finish out the creation of the “lid.” Ultimately I still failed. The screw and the hole drilled for the screw were not made in tandem, which is a good (and perhaps obvious) learning for the future."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ultimately, I am still happy with the box, given I have made something without instructions to refer to. I did not take any notes during Phil’s presentation and things ended up okay."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thank you for reading."
+        }
+      ]
+    }
+  ]
 }

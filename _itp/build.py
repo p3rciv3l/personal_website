@@ -81,7 +81,7 @@ def block(item):
 
 def page(title, path, content, back_href='/', back_label='homepage', post=False):
     media_styles = '\n  <link rel="stylesheet" href="/itp/post-media.css">' if post else ''
-    main_class = ' class="content-wrapper"' if post else ''
+    main_class = ' class="content-wrapper itp-article"' if post else ''
     return f'''<!DOCTYPE html>
 {MARKER}
 <html lang="en">

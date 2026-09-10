@@ -23,7 +23,7 @@ Use the same format each time:
 3. A continuous article using the existing site's `robot-intro` paragraph spacing and reading width. Keep supplied media between the corresponding paragraphs. Use section headings only when the content calls for them.
 4. A stable URL: `/itp/<course>/<post-slug>/`. Keep that slug unchanged on later edits. Class indexes list published posts newest first.
 
-Match the existing website exactly. The index and class pages use only `/styles/style.css`, with the same small bold headings, left alignment, dash-prefixed underlined link lists, and bottom back link as `great-articles.html` and `reading.html`. Posts reuse the `robot-intro` class from `content-codex-sends-to-me.html`; `itp/post-media.css` only contains media and list containment rules. Avi explicitly rejected the previous centered editorial redesign. Do not add a separate theme, enlarged titles, generous page padding, numbered rows, dividers, arrows, sans-serif metadata, mastheads, or branded footers. Do not link ITP from the homepage, public navigation, feeds, or sitemaps.
+Match the existing website exactly. The index and class pages use only `/styles/style.css`, with the same small bold headings, left alignment, dash-prefixed underlined link lists, and bottom back link as `great-articles.html` and `reading.html`. Posts reuse the `robot-intro` class from `content-codex-sends-to-me.html`. At Avi's request, `itp/post-media.css` makes posts compact: 16px text, a maximum 512px reading column, and media displayed at no more than 320px wide or 280px tall, shrinking to fit smaller screens. Keep the existing typeface, colors, left alignment and paragraph spacing. Avi explicitly rejected the previous centered editorial redesign. Do not add a separate theme, enlarged titles, generous page padding, numbered rows, dividers, arrows, sans-serif metadata, mastheads, or branded footers. Do not link ITP from the homepage, public navigation, feeds, or sitemaps.
 
 ## Authoring and building
 
@@ -38,7 +38,7 @@ python3 _itp/build.py --check
 
 Commit both the content and generated HTML, together with any media, and publish via the website's existing GitHub Pages `main` branch. This journal needs no JavaScript or additional dependencies. The generator removes only obsolete HTML that carries its generated-file marker. It never modifies the homepage or other site sections.
 
-Place uploaded media under `itp/media/<post-slug>/` and use paths like `/itp/media/first-project/prototype.jpg`. Supply descriptive image alt text, a label for video/audio, and captions when provided. For video with speech, include an accessible transcript in the post. Preserve original image proportions. Use HTTPS for external links and media. Do not add tracking or autoplay.
+Place uploaded media under `itp/media/<post-slug>/` and use paths like `/itp/media/first-project/prototype.jpg`. Supply descriptive image alt text and captions when provided. Preserve original image proportions and the exact interleaving supplied by Avi. For this journal, Avi requested no audio: remove audio tracks entirely. Convert videos longer than 10 seconds to GIFs, speeding up the full recording to exactly 10 seconds. Compress and downsize uploaded media for many future posts; do not commit the full-size source videos. Use HTTPS for external links and media. Do not add tracking. GIFs loop; retain controls on any shorter silent video.
 
 Supported blocks, in the exact order they should appear:
 
