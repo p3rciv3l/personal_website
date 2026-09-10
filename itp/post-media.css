@@ -1,5 +1,4 @@
 /* Compact posts, using the existing site's typeface, colors and spacing. */
-.itp-post-date { display: block; line-height: .6; }
 .itp-article { --font-size-base: 1rem; max-width: 32rem; }
 .itp-article .itp-post { max-width: 100%; }
 .itp-post figure { margin: var(--space-medium) 0; }
