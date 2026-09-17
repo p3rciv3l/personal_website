@@ -36,7 +36,7 @@ python3 _itp/build.py
 python3 _itp/build.py --check
 ```
 
-Commit both the content and generated HTML, together with any media, and publish via the website's existing GitHub Pages `main` branch. This journal needs no JavaScript or additional dependencies. The generator removes only obsolete HTML that carries its generated-file marker. It never modifies the homepage or other site sections.
+Commit both the content and generated HTML, together with any media, and publish via the website's existing GitHub Pages `main` branch. Posts need no additional dependencies. Only posts with a conversation viewer load the small `/itp/post-conversation.js` script; their text and disclosure work without JavaScript, and the conversation link opens its own page as a fallback. The generator removes only obsolete HTML that carries its generated-file marker. It never modifies the homepage or other site sections.
 
 Place uploaded media under `itp/media/<post-slug>/` and use paths like `/itp/media/first-project/prototype.jpg`. Supply descriptive image alt text and captions when provided. Preserve original image proportions and the exact interleaving supplied by Avi. For this journal, Avi requested no audio: remove audio tracks entirely. Convert videos longer than 10 seconds to GIFs, speeding up the full recording to exactly 10 seconds. Compress and downsize uploaded media for many future posts; do not commit the full-size source videos. Use HTTPS for external links and media. Do not add tracking. GIFs loop; retain controls on any shorter silent video.
 
@@ -61,6 +61,10 @@ Paragraphs, captions, quotes, and list items can contain inline links or emphasi
 ```
 
 Inline types also include `strong` and `code`. Text is escaped, so pasted HTML is shown as text rather than executed. Normal paragraphs do not interpret Markdown syntax.
+
+The “5 items” post keeps its original `five_items` URL. Its `reveal` block uses a closed native disclosure for the trypophobia warning, with its triangle hidden and lazy-loaded images inside. `image-grid` groups images into two columns (four images form a 2×2 collage). Image blocks can specify `width`, `height`, and `zoom: true` to reserve layout space and link to the full image. Size images for their compact display and strip metadata; animated GIFs keep the requested format, dimensions, and palette small. At Avi’s request, both GIFs in this post loop in exactly two seconds, preserving all frames.
+
+The `conversation` inline link opens its `src` in a scrollable viewer on hover, focus, or click, loading that page only on first use. A post's `transcript` key names its source under `_itp/transcripts/`; the generator preserves the original user-visible message text and image order in a separate conversation page. Exclude system instructions, internal reasoning, tool logs, and environment metadata from transcripts. Keep original full-size attachments and raw conversation exports outside the repository.
 
 ## Link-only visibility
 

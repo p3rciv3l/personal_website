@@ -17,7 +17,7 @@ def e(value):
 
 
 def slug(value):
-    if not isinstance(value, str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', value):
+    if not isinstance(value, str) or not re.fullmatch(r'[a-z0-9]+(?:[-_][a-z0-9]+)*', value):
         raise ValueError(f'Invalid slug: {value!r}')
     return value
 
@@ -39,6 +39,11 @@ def inline(value):
     for part in value:
         if isinstance(part, str):
             parts.append(e(part))
+        elif part.get('type') == 'conversation':
+            parts.append(f'<span class="conversation"><a class="conversation-trigger" href="{url(part["src"])}" aria-controls="saucer-conversation" aria-expanded="false">{e(part["text"])}</a>'
+                         '<span class="conversation-panel" id="saucer-conversation" role="region" aria-label="Saucer design conversation" hidden>'
+                         '<span class="conversation-toolbar"><strong>Saucer design conversation</strong><button type="button" class="conversation-close" aria-label="Close conversation">Close</button></span>'
+                         '<iframe title="Full saucer design conversation" referrerpolicy="no-referrer"></iframe></span></span>')
         elif 'href' in part:
             parts.append(f'<a href="{url(part["href"])}">{e(part["text"])}</a>')
         elif part.get('type') in ('em', 'strong', 'code'):
@@ -51,6 +56,12 @@ def inline(value):
 
 def block(item):
     kind = item['type']
+    if kind == 'reveal':
+        return (f'<details class="post-reveal"><summary>{e(item["warning"])} '
+                f'<span>{e(item["label"])}</span></summary>\n'
+                + '\n'.join(block(child) for child in item['blocks']) + '\n</details>')
+    if kind == 'image-grid':
+        return '<div class="media-grid">' + ''.join(block(child) for child in item['images']) + '</div>'
     if kind == 'paragraph':
         return f'<p>{inline(item["text"])}</p>'
     if kind == 'heading':
@@ -61,7 +72,10 @@ def block(item):
     if kind in ('image', 'video', 'audio'):
         src = url(item['src'])
         if kind == 'image':
-            media = f'<img src="{src}" alt="{e(item["alt"])}" loading="lazy" decoding="async">'
+            dimensions = f' width="{int(item["width"])}" height="{int(item["height"])}"' if 'width' in item and 'height' in item else ''
+            media = f'<img src="{src}" alt="{e(item["alt"])}"{dimensions} loading="lazy" decoding="async">'
+            if item.get('zoom'):
+                media = f'<a href="{src}" aria-label="{e(item["alt"])} — open full image">{media}</a>'
         else:
             media = f'<{kind} src="{src}" controls preload="metadata" aria-label="{e(item["label"])}"><a href="{src}">Open {kind}</a></{kind}>'
         caption = f'<figcaption>{inline(item["caption"])}</figcaption>' if item.get('caption') else ''
@@ -79,8 +93,9 @@ def block(item):
     raise ValueError(f'Unknown block type: {kind}')
 
 
-def page(title, path, content, back_href='/', back_label='homepage', post=False):
+def page(title, path, content, back_href='/', back_label='homepage', post=False, conversation=False):
     media_styles = '\n  <link rel="stylesheet" href="/itp/post-media.css">' if post else ''
+    post_script = '\n  <script src="/itp/post-conversation.js" defer></script>' if conversation else ''
     main_class = ' class="content-wrapper itp-article"' if post else ''
     return f'''<!DOCTYPE html>
 {MARKER}
@@ -92,7 +107,7 @@ def page(title, path, content, back_href='/', back_label='homepage', post=False)
   <meta name="referrer" content="no-referrer">
   <title>{e(title)} - Avinash Krishna</title>
   <link rel="canonical" href="https://www.avikrishna.com{path}">
-  <link rel="stylesheet" href="/styles/style.css">{media_styles}
+  <link rel="stylesheet" href="/styles/style.css">{media_styles}{post_script}
 </head>
 <body>
   <main{main_class}>
@@ -154,7 +169,22 @@ def render(data):
         summary = f'<p>{e(p["summary"])}</p>' if p.get('summary') else ''
         body = '\n'.join(block(b) for b in p['blocks'])
         content = f'<article><h1><b>{e(p["title"])}</b></h1><div class="robot-intro itp-post"><p><time datetime="{e(p["date"])}">{date_label(p["date"])}</time></p>{summary}\n{body}</div></article>'
-        pages[post_path(p).lstrip('/') + 'index.html'] = page(p['title'], post_path(p), content, f'/itp/{c["slug"]}/', c['title'], post=True)
+        pages[post_path(p).lstrip('/') + 'index.html'] = page(p['title'], post_path(p), content, f'/itp/{c["slug"]}/', c['title'], post=True, conversation='class="conversation"' in body)
+        if p.get('transcript'):
+            transcript = json.loads((ROOT / '_itp/transcripts' / f'{slug(p["transcript"])}.json').read_text())
+            messages = []
+            for message in transcript['messages']:
+                role = {'user': 'Avi', 'assistant': 'Codex'}[message['role']]
+                parts = []
+                for part in message['content']:
+                    if part['type'] == 'text':
+                        parts.append(f'<div class="message-text">{e(part["text"])}</div>')
+                    else:
+                        parts.append(block(part))
+                messages.append(f'<section><h2>{role}</h2>' + ''.join(parts) + '</section>')
+            content = f'<article class="conversation-transcript"><h1>{e(transcript["title"])}</h1>' + '\n'.join(messages) + '</article>'
+            path = post_path(p) + 'conversation/'
+            pages[path.lstrip('/') + 'index.html'] = page(transcript['title'], path, content, post_path(p), p['title'], post=True)
     return pages
 
 
