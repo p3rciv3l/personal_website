@@ -276,6 +276,97 @@
           ]
         }
       ]
+    },
+    {
+      "course": "introduction-to-fabrication",
+      "slug": "one-big-one-small",
+      "title": "One Big, One Small",
+      "date": "2026-09-23",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": [
+            "Hello my name is Avi. To learn more about me, please check the ",
+            {
+              "text": "root domain",
+              "href": "/"
+            },
+            ". As a reminder, my theme is Art Deco."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "For this project, I wanted to try something big. From the start, I always had the idea of creating a small version of a well known Art Deco building, and for this project I finally made an attempt at it. This was heavily inspired by Chris Hytha’s Art Deco building lamps. Chris is an acquaintance and one of the most important voices in advocating for the resurgence of Art Deco-style architecture in America."
+        },
+        {
+          "type": "paragraph",
+          "text": "I did a good amount of research and looked at about 60 different buildings to see what would be best, and ultimately settled on the Eastern Columbia building in Los Angeles:"
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/eastern-columbia.webp",
+          "alt": "The turquoise Eastern Columbia Building in Los Angeles, with its clock tower and EASTERN lettering.",
+          "width": 727,
+          "height": 1080,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Here is me scouting one building, the American Radiator Building, in person."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/american-radiator-visit.webp",
+          "alt": "Avi in Bryant Park at night with the American Radiator Building behind him.",
+          "width": 810,
+          "height": 1080,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "This project was heavily assisted by Codex. I wanted to get an incredibly intricate engravings felt this would be best done by AI. An abridged version of the conversation is here. I did some minimal editing on the Illustrator files, but most of the work I did was the four hour conversation leading up to it. Some highlights of the collaborative process:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Pivoting away from the American Radiator Building in Bryant Park to the Eastern Columbia Building",
+            "Deciding which details to keep (e.g., the “EASTERN” lettering) and which not to (e.g., making visible the “terracotta” tiling)",
+            "Deciding on a mixed beveled corners (main section) and straight corners (upper section) design",
+            "Figuring out the difference between sides",
+            "Many hours of manual and prompted design modifications"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Upon reading this, it doesn’t seem like much work. Still, it took me around 12 hours to think through all this, and was pretty nerve wracking."
+        },
+        {
+          "type": "paragraph",
+          "text": "Below was the original Illustrator file I had, which after consulting with various shop staff, I realized was too complex. This was a brutal realization given the amount of time I had spent working on the design of these files. This conversation also helped me realize that much of the implementation complexity was realted to the specific laser cutting machine as opposed to the creation of the Illustrator file."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/original-color-design.webp",
+          "alt": "The original intricate Eastern Columbia front panel design, shown with colored laser-cutting and engraving paths.",
+          "width": 964,
+          "height": 1684,
+          "zoom": true
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/original-line-design.webp",
+          "alt": "The original Eastern Columbia front panel design in black and white, showing the clock, lettering, and detailed facade.",
+          "width": 966,
+          "height": 1680,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "I then proceeded to remove about 85% of the complexity in the creation of the new files, which I think served as a sobering lesson in using the right machine for the right job. These new files represented a much more “minimalist” representation of the Eastern Columbia building."
+        }
+      ]
     }
   ]
 }
