@@ -1,0 +1,447 @@
+{
+  "term": "Fall 2026",
+  "courses": [
+    {
+      "slug": "applications",
+      "title": "Applications",
+      "code": "ITPG-GT 2000"
+    },
+    {
+      "slug": "introduction-to-fabrication",
+      "title": "Introduction to Fabrication",
+      "code": "ITPG-GT 2637"
+    },
+    {
+      "slug": "hypercinema",
+      "title": "Comm Lab: Hypercinema",
+      "code": "ITPG-GT 2004"
+    },
+    {
+      "slug": "physical-computing",
+      "title": "Introduction to Physical Computing",
+      "code": "ITPG-GT 2301"
+    },
+    {
+      "slug": "visual-language",
+      "title": "Comm Lab: Visual Language",
+      "code": "ITPG-GT 2005"
+    }
+  ],
+  "posts": [
+    {
+      "course": "introduction-to-fabrication",
+      "slug": "box",
+      "title": "Box",
+      "date": "2026-09-09",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": [
+            "Hi, my name is Avi. To learn more about me, please check the ",
+            {
+              "text": "root domain",
+              "href": "/"
+            },
+            "."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I was very excited to attempt making the box, and ultimately used it to store some candy a friend got from Carbone. The candy was pretty good."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/box/candy-box.jpg",
+          "alt": "The finished wooden box with its lid slid aside to show wrapped candy."
+        },
+        {
+          "type": "paragraph",
+          "text": "The process of making the box was very simple. I worked on it with another student and we both guided each other through the process, along with some guidance from a member of the shop staff. Below are the steps we took."
+        },
+        {
+          "type": "paragraph",
+          "text": "1. Found a scrap piece of wood and cut it in half using bandsaw. We turned on the machine that sucks up dust but I still felt as though I inhaled a lot-- maybe time to stock up on masks."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/box/bandsaw.gif",
+          "alt": "Sped-up, silent clip of cutting the wood with a bandsaw."
+        },
+        {
+          "type": "paragraph",
+          "text": "2. I then drilled a hole on the box. In hingsight, this hole was too close to the edge given that I decided to sand the lid."
+        },
+        {
+          "type": "paragraph",
+          "text": "3. After drilling the hole, I cut the box horizontally in a ~4:1 ratio, again using the bandsaw. This created the lid. This process was a bit finnicky and I needed to be better with stabilization during this process. Alas."
+        },
+        {
+          "type": "paragraph",
+          "text": "4. After this, I sanded the bottom of the box (where stuff goes) to be straight. However, I was too aggressive with this process and ended up getting some slanted sides. For the top, I hastily sanded it to get rounded corners-- I did not feel compelled to be perfect and a quick glance would not see much defects."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/box/sanding.gif",
+          "alt": "Sped-up, silent clip of sanding the wooden box."
+        },
+        {
+          "type": "paragraph",
+          "text": "5. Then, using the drill press and forstner bits, I made the hole in the box to store stuff."
+        },
+        {
+          "type": "paragraph",
+          "text": "5. It took me a bit time to find the right screw to finish out the creation of the “lid.” Ultimately I still failed. The screw and the hole drilled for the screw were not made in tandem, which is a good (and perhaps obvious) learning for the future."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ultimately, I am still happy with the box, given I have made something without instructions to refer to. I did not take any notes during Phil’s presentation and things ended up okay."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thank you for reading."
+        }
+      ]
+    },
+    {
+      "course": "introduction-to-fabrication",
+      "slug": "five_items",
+      "title": "Five items",
+      "date": "2026-09-16",
+      "published": true,
+      "transcript": "five_items",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": [
+            "Hello my name is Avi. To learn more about me, please check the ",
+            {
+              "text": "root domain",
+              "href": "/"
+            },
+            "."
+          ]
+        },
+        {
+          "type": "reveal",
+          "warning": "This post may be disturbing for those with trypophobia.",
+          "label": "Click here to view the rest of this post.",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Similar to the box, I was very excited for this project. Unfortunately, I attempted something far too complex, achieved very disappointing results, and only produced one object of the five that I was to make."
+            },
+            {
+              "type": "image-grid",
+              "images": [
+                {
+                  "type": "image",
+                  "src": "/itp/media/five_items/saucer-top.webp",
+                  "alt": "The finished wooden saucer seen from above, with uneven square recesses.",
+                  "width": 420,
+                  "height": 560,
+                  "zoom": true
+                },
+                {
+                  "type": "image",
+                  "src": "/itp/media/five_items/saucer-angle.webp",
+                  "alt": "An angled view of the wooden saucer on a tiled table.",
+                  "width": 420,
+                  "height": 560,
+                  "zoom": true
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": [
+                "My theme for this semester is ",
+                {
+                  "type": "em",
+                  "text": "Art Deco"
+                },
+                ", which is a uniquely American architectural style that emphasizes polychromatic coloring, exaggerated human forms, setback reliefs, and clocks. For this project, I specifically focused on ",
+                {
+                  "text": "Ziggurat like reliefs",
+                  "href": "https://www.alamy.com/infographic-about-the-ziggurat-huge-steeped-pyramidal-buildings-from-the-xxi-bc-focusing-on-urs-ziggurat-located-in-what-is-now-known-as-iraq-adobe-indesign-indd-4960x3188-image525180155.html"
+                },
+                ", which means there are lots of setbacks in the building. The Empire State Building and the American Radiator are classic examples of this style. That being said, I was not willing to make an entire building or even a model of one, so I decided to make a saucer, where instead of a curve, it was as though you were trying to make a curved base with only 4 “steps”."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": [
+                "This idea was entirely my own, but came after some ",
+                {
+                  "type": "conversation",
+                  "text": "deliberation in ChatGPT",
+                  "src": "/itp/introduction-to-fabrication/five_items/conversation/"
+                },
+                ". Below are some drawings I made, which I gave as context to Codex:"
+              ]
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/five_items/sketch.webp",
+              "alt": "Whiteboard sketches of the pine slab, square saucer and stepped cross-section.",
+              "width": 960,
+              "height": 720,
+              "zoom": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Along with ideation, Codex was especially useful for generating a Blender file that allowed me to visualize what I had in mind and made it easy to play around with my assumptions. The Blender file looked like this:"
+            },
+            {
+              "type": "image-grid",
+              "images": [
+                {
+                  "type": "image",
+                  "src": "/itp/media/five_items/blender-render.webp",
+                  "alt": "Isometric render of the pine saucer with four nested square steps.",
+                  "width": 926,
+                  "height": 720,
+                  "zoom": true
+                },
+                {
+                  "type": "image",
+                  "src": "/itp/media/five_items/blender-perspective.webp",
+                  "alt": "Angled view of the saucer model in Blender.",
+                  "width": 960,
+                  "height": 678,
+                  "zoom": true
+                },
+                {
+                  "type": "image",
+                  "src": "/itp/media/five_items/blender-top.webp",
+                  "alt": "Top view of the square saucer model in Blender.",
+                  "width": 951,
+                  "height": 720,
+                  "zoom": true
+                },
+                {
+                  "type": "image",
+                  "src": "/itp/media/five_items/blender-dimensions.webp",
+                  "alt": "Editable Blender dimensions for the outer square, thickness, drop and ledges, in inches.",
+                  "width": 728,
+                  "height": 368,
+                  "zoom": true
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "In mind, the process for this was fairly simple: I would measure out each recessed section, each increasing in length and depth as they got closer to the base (see above for exact dimensions), draw lines, and then use the drill press to make the various sections."
+            },
+            {
+              "type": "paragraph",
+              "text": "In practice, I not only struggled immensely with drawing straight lines, the drilling process took over 100 holes and an amount of precision I did not possess. Additionally, while Phil was very helpful in terms of figuring out how to make precise the drilling process, I found it very difficult to actually eyeball the exact place the drill was at all times. As a result, the saucer has clear levels, but which are incredibly uneven."
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/five_items/drilling.gif",
+              "alt": "Silent looping clip of drilling the wooden saucer.",
+              "width": 256,
+              "height": 144,
+              "zoom": false
+            },
+            {
+              "type": "paragraph",
+              "text": "The below is a GIF of the various jigs I made simply to draw the lines, which ended up being dramatically uneven despite this Rube Goldberg-esque process."
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/five_items/jigs.gif",
+              "alt": "Eight photos of rulers, clamps and wooden jigs used to mark the saucer, shown in the original order.",
+              "width": 210,
+              "height": 280,
+              "zoom": false
+            },
+            {
+              "type": "paragraph",
+              "text": "After drilling the recesses in, I tried my hand at two types of Dremels, one sandpaper and one metal, to even things out. This was the most satisfying part of this process, and it gave my woodwork some resemblance to what was created in Blender. Still, the result is quite rough."
+            },
+            {
+              "type": "paragraph",
+              "text": "I am sorry that I did not get to create all five. At 9:45PM today I had the idea of using clippers and saws to make the recessed levels, which may have produced a more precise and aesthetically pleasing result. Unfortunately, I lacked the willpower to stay up to finish out all five."
+            },
+            {
+              "type": "paragraph",
+              "text": "This process was a humbling lesson in the limits of converting imagination to reality. Still, I know this project would have been possible with access and knowledge of how to use a CNC machine, which I will perhaps do to redeem myself in the future."
+            },
+            {
+              "type": "paragraph",
+              "text": "I remain incredibly excited for future projects in this class."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course": "introduction-to-fabrication",
+      "slug": "one-big-one-small",
+      "title": "One Big, One Small",
+      "date": "2026-09-23",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": [
+            "Hello my name is Avi. To learn more about me, please check the ",
+            {
+              "text": "root domain",
+              "href": "/"
+            },
+            ". As a reminder, my theme is Art Deco."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "For this project, I wanted to try something big. From the start, I always had the idea of creating a small version of a well known Art Deco building, and for this project I finally made an attempt at it. This was heavily inspired by Chris Hytha’s Art Deco building lamps. Chris is an acquaintance and one of the most important voices in advocating for the resurgence of Art Deco-style architecture in America."
+        },
+        {
+          "type": "paragraph",
+          "text": "I did a good amount of research and looked at about 60 different buildings to see what would be best, and ultimately settled on the Eastern Columbia building in Los Angeles:"
+        },
+        {
+          "type": "image-grid",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/one-big-one-small/eastern-columbia-aerial.webp",
+              "alt": "The Eastern Columbia Building’s turquoise clock tower in Los Angeles seen from above.",
+              "width": 554,
+              "height": 554,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/one-big-one-small/eastern-columbia-front.webp",
+              "alt": "The Eastern Columbia Building’s turquoise terra-cotta facade seen from the street.",
+              "width": 412,
+              "height": 744,
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Here is me scouting another building, the American Radiator Building, in person."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/american-radiator-visit.webp",
+          "alt": "Avi in Bryant Park at night with the American Radiator Building behind him.",
+          "width": 810,
+          "height": 1080,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "This project was heavily assisted by Codex. Lots of research into publicly available architectural plans, modifications to parts of the Illustrator file when I was too lazy (e.g., changing everything to a certain color scale), and general back and forth over the scope of the project was super useful here. Codex also helped me decide on beveled corners."
+        },
+        {
+          "type": "paragraph",
+          "text": "Below was the original Illustrator file I had, which after consulting with various shop staff, I decided was too complex. This was a brutal realization given the amount of time I had spent working on the design of these files. This conversation also helped me realize that much of the implementation complexity was realted to the specific laser cutting machine as opposed to the creation of the Illustrator file."
+        },
+        {
+          "type": "image-grid",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/one-big-one-small/original-color-design.webp",
+              "alt": "The original intricate Eastern Columbia front panel design, shown with colored laser-cutting and engraving paths.",
+              "width": 964,
+              "height": 1684,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/one-big-one-small/original-line-design.webp",
+              "alt": "The original Eastern Columbia front panel design in black and white, showing the clock, lettering, and detailed facade.",
+              "width": 966,
+              "height": 1680,
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I then proceeded to remove about 85% of the complexity in the creation of new files. These new files represented a much more “minimalist” representation of the Eastern Columbia building."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/minimalist-design.webp",
+          "alt": "The simplified Illustrator file for the Eastern Columbia front panel, with far fewer cut and engrave paths.",
+          "width": 490,
+          "height": 858,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "However, speaking to Phil breathed some life back into me: evidently, the fire risk of engraving is much lower than cutting. This meant that I could use my original, detailed file. So I converted that file to greyscale and started the engraving process. The result was slightly off to the right (I shifted it too far!), but overall the result was was directionally correct and all the motivation I needed to keep going."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/engraving-first-try.webp",
+          "alt": "The first engraving test on a pine slab, shifted slightly to the right.",
+          "width": 1200,
+          "height": 1600,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "After speaking to Phil again, he apprised me of the speed / depth tradeoff, which is very intuitive: the higher the speed, the shallower the depth. This axiom is especially true for hard materials, which wood is one of. So I cut the speed to 50% and the engravings became very clear, although still quite shallow. Time-permitting, I may have set the laser cutter to operate at 10% speed and 1200 DPI, for each of the eight slabs, but time was not a luxury I possessed. Throughout the process, I experimented with cutting down DPI and speed to very low amounts, which I found worked very well for the smaller slabs. I eventually settled on 300dpi / 13% speed / 100% power for the small slabs, which produced very satisfiyingly deep cuts. You can actually see me dialing in the settings in realtime over time just by looking at different panels:"
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/small-slabs.webp",
+          "alt": "Four small pine slabs showing the engraving getting deeper and cleaner as the speed, DPI, and power settings were dialed in.",
+          "width": 1600,
+          "height": 914,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "And these are the larger panels:"
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/large-panels.webp",
+          "alt": "Four larger engraved pine panels with a lighter, shallower finish.",
+          "width": 1600,
+          "height": 839,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Following this, I needed to bezel the sides, which meant 16 cuts from the miter saw in total, which essentially no room for error. I had some time inbetween cuts as I felt that others should use the FusionPro. There was also an impromptu birthday party for a fellow student that I attended. Anyway, in this waiting process, I learned how to angle the miter saw to 45˚ and did one cut semi-sucessfully. The issue with this cut is that it’s a bit difficult to stabilize blocks of wood with clamps. Another issue was that the wood, while looking good to the eye, was actually super warped to begin with."
+        },
+        {
+          "type": "paragraph",
+          "text": "All this meant that there was always a risk of cutting off parts of the wood that I didn’t intend to, which happened on the first cut. Then, on the third cut, at 9:45, I made the mistake of cutting the wrong side of a slab of wood. I thus decided it was not worth it to hastily operate a miter saw and concluded activities for the night."
+        },
+        {
+          "type": "paragraph",
+          "text": "The complete vision, which I had all the parts for, was as follows:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two buildings, comprised of four side panels and two top panels. The side panels would be joined on their bezeled sides. On the bottom panel would sit a large tea light, and light would show through the top layers of windows. Directionally, it would look like this lamp from Chris Hytha, but with wood engravings and the panels would not actually be set back."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/one-big-one-small/hytha-lamp.webp",
+          "alt": "Chris Hytha’s Carbide and Carbon Building lamp, lit from within.",
+          "width": 1500,
+          "height": 1500,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "I got close. Excited for the next class."
+        }
+      ]
+    }
+  ]
+}
