@@ -158,7 +158,8 @@ def render(data):
     pages['itp/index.html'] = page('ITP', '/itp/', content)
     for c in courses.values():
         entries = ''
-        for p in posts:
+        course_posts = sorted(posts, key=lambda p: p['date']) if c['slug'] == 'physical-computing' else posts
+        for p in course_posts:
             if p['course'] != c['slug']:
                 continue
             summary = f'<p>{e(p["summary"])}</p>' if p.get('summary') else ''
