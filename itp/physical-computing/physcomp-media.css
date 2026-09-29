@@ -27,3 +27,29 @@
   .physcomp-article .itp-post > figure,
   .physcomp-article .itp-post > .media-grid { margin: 2rem 0 3.25rem; }
 }
+
+/* Later lab post: compact media and clear page-colored gaps, without dark letterboxes. */
+.physcomp-article:has(video) { max-width: 48rem; }
+.physcomp-article:has(video) .itp-post > p { margin-bottom: 1rem; }
+.physcomp-article:has(video) .itp-post > p:first-child { margin-bottom: 1.6rem; }
+.physcomp-article:has(video) .itp-post > figure,
+.physcomp-article:has(video) .itp-post > .media-grid { margin: 1.2rem 0 1.8rem; }
+.physcomp-article:has(video) .itp-post figure { background: transparent; overflow: visible; }
+.physcomp-article:has(video) .itp-post > figure { max-width: 28rem; }
+.physcomp-article:has(video) .itp-post > figure :is(img, video) { width: auto; max-width: 100%; max-height: 18rem; }
+.physcomp-article:has(video) .itp-post > .media-grid { width: fit-content; max-width: 100%; grid-template-columns: repeat(2,12rem); gap: .5rem; align-items: center; }
+.physcomp-article:has(video) .itp-post > .media-grid figure { min-height: 0; background: transparent; }
+.physcomp-article:has(video) .itp-post > .media-grid figure :is(img,video) { width: auto; max-width: 100%; max-height: 15rem; margin-inline: 0; }
+.physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) { grid-template-columns: repeat(3,10rem); }
+.physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 12rem; }
+@media(max-width:680px) {
+  .physcomp-article:has(video) .itp-post > .media-grid,
+  .physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) {
+    width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem;
+  }
+  .physcomp-article:has(video) .itp-post > figure,
+  .physcomp-article:has(video) .itp-post > .media-grid { margin: 1rem 0 1.5rem; }
+  .physcomp-article:has(video) .itp-post > figure :is(img, video) { max-height: 17rem; }
+  .physcomp-article:has(video) .itp-post > .media-grid figure :is(img,video) { max-height: 14rem; margin-inline: 0; }
+  .physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 12rem; }
+}
