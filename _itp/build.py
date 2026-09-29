@@ -158,7 +158,7 @@ def render(data):
     pages['itp/index.html'] = page('ITP', '/itp/', content)
     for c in courses.values():
         entries = ''
-        course_posts = sorted(posts, key=lambda p: p['date']) if c['slug'] == 'physical-computing' else posts
+        course_posts = posts  # Newest post first on every course index.
         for p in course_posts:
             if p['course'] != c['slug']:
                 continue

@@ -21,7 +21,7 @@ Use the same format each time:
 1. A small bold title using the existing site's `h1` style, followed by the publication date.
 2. Only if useful, a short supplied or approved introduction.
 3. A continuous article using the existing site's `robot-intro` paragraph spacing and reading width. Keep supplied media between the corresponding paragraphs. Use section headings only when the content calls for them.
-4. A stable URL: `/itp/<course>/<post-slug>/`. Keep that slug unchanged on later edits. Class indexes list published posts newest first.
+4. A stable URL: `/itp/<course>/<post-slug>/`. Keep that slug unchanged on later edits. Class indexes list published posts newest first, including Physical Computing; an earlier Week 1 post appears beneath a later post.
 
 Match the existing website exactly. The index and class pages use only `/styles/style.css`, with the same small bold headings, left alignment, dash-prefixed underlined link lists, and bottom back link as `great-articles.html` and `reading.html`. Posts reuse the `robot-intro` class from `content-codex-sends-to-me.html`. At Avi's request, `itp/post-media.css` makes posts compact: 16px text, a maximum 512px reading column, and media displayed at no more than 320px wide or 280px tall, shrinking to fit smaller screens. Keep the existing typeface, colors, left alignment and paragraph spacing. Avi explicitly rejected the previous centered editorial redesign. Do not add a separate theme, enlarged titles, generous page padding, numbered rows, dividers, arrows, sans-serif metadata, mastheads, or branded footers. Do not link ITP from the homepage, public navigation, feeds, or sitemaps.
 
