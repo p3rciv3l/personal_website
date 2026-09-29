@@ -442,6 +442,124 @@
           "text": "I got close. Excited for the next class."
         }
       ]
+    },
+    {
+      "course": "physical-computing",
+      "slug": "computation-beyond-death",
+      "title": "Computation Beyond Death",
+      "date": "2026-09-29",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Finally! Successful week. I feel like I've been treading water in this class thus far, but this week I finally sat down with an (LLM) tutor for an hour and cleared up everything I didn't understand."
+        },
+        {
+          "type": "paragraph",
+          "text": "But at the start of this week's work, I experienced a tragedy. My Arduino died. In fact, it has been dead for some time, unbeknownst to me."
+        },
+        {
+          "type": "paragraph",
+          "text": "In last week's labs, I overheated or shorted some circuits and the arduino was non-functional since. It took me till today to find out. Huge shoutout to Gabriel who took some time to help me understand some mistakes I made and proceed with the lab."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/computation-beyond-death/01-board.webp",
+          "alt": "Arduino boards, including a board in a small RIP coffin, on the workshop table.",
+          "width": 2200,
+          "height": 1650,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Here's the first board I successfully made and the associated video."
+        },
+        {
+          "type": "image-grid",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/computation-beyond-death/02-breadboard.webp",
+              "alt": "The first breadboard circuit with an Arduino and blue pushbutton.",
+              "width": 1650,
+              "height": 2200,
+              "zoom": true
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/computation-beyond-death/03.mp4",
+              "label": "Blue pushbutton illuminating an LED on the Arduino breadboard",
+              "poster": "/itp/media/computation-beyond-death/03-poster.webp"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I then moved onto controlling the light with the potentiometer, which was confusing for a second because the image from the lab showed a rotary potentiometer. Still, I got it to work."
+        },
+        {
+          "type": "video",
+          "src": "/itp/media/computation-beyond-death/04.mp4",
+          "label": "Controlling the LED with a potentiometer",
+          "poster": "/itp/media/computation-beyond-death/04-poster.webp"
+        },
+        {
+          "type": "paragraph",
+          "text": "I then had some fun with buttons. This was pretty simple, but it was at this point--a few hours in--where I started to get a handle on the placement of wires and started to get an understanding of the schematic diagrams. I started to understand that I didn't need to follow the diagrams exactly if my wire was too long or short, and started to understand better the different inputs to the Arduino."
+        },
+        {
+          "type": "image-grid",
+          "images": [
+            {
+              "type": "video",
+              "src": "/itp/media/computation-beyond-death/05.mp4",
+              "label": "Button demonstration with Arduino code",
+              "poster": "/itp/media/computation-beyond-death/05-poster.webp"
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/computation-beyond-death/06.mp4",
+              "label": "Button demonstration with Arduino code, portrait view",
+              "poster": "/itp/media/computation-beyond-death/06-poster.webp"
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/computation-beyond-death/07.mp4",
+              "label": "Button demonstration with Arduino code, another angle",
+              "poster": "/itp/media/computation-beyond-death/07-poster.webp"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I then did the stuff with the pressure sensor! I was having fun and accidentally ripped the sensor off the breadboard."
+        },
+        {
+          "type": "image-grid",
+          "images": [
+            {
+              "type": "video",
+              "src": "/itp/media/computation-beyond-death/08.mp4",
+              "label": "Pressure-sensor breadboard demonstration",
+              "poster": "/itp/media/computation-beyond-death/08-poster.webp"
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/computation-beyond-death/09.mp4",
+              "label": "Pressure-sensor wiring and Arduino code demonstration",
+              "poster": "/itp/media/computation-beyond-death/09-poster.webp"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Overall, I am just happy that I was able to actual get the wires and everything done-- I no longer feel behind. Ultimately, stripping the wires and putting them in was a big big bottleneck, especially in the beginning. So annoying! I can see why you recommended getting our own."
+        },
+        {
+          "type": "paragraph",
+          "text": "Looking forward to future assignments!"
+        }
+      ]
     }
   ]
 }
