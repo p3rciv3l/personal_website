@@ -8,7 +8,7 @@
     },
     {
       "slug": "introduction-to-fabrication",
-      "title": "Introduction to Fabrication",
+      "title": "Introduction to fabrication",
       "code": "ITPG-GT 2637"
     },
     {
@@ -18,12 +18,12 @@
     },
     {
       "slug": "physical-computing",
-      "title": "Introduction to Physical Computing",
+      "title": "Introduction to physical computing",
       "code": "ITPG-GT 2301"
     },
     {
       "slug": "visual-language",
-      "title": "Comm Lab: Visual Language",
+      "title": "Comm Lab: visual language",
       "code": "ITPG-GT 2005"
     }
   ],
@@ -280,7 +280,7 @@
     {
       "course": "introduction-to-fabrication",
       "slug": "one-big-one-small",
-      "title": "One Big, One Small",
+      "title": "One big, one small",
       "date": "2026-09-23",
       "published": true,
       "blocks": [
@@ -446,7 +446,7 @@
     {
       "course": "physical-computing",
       "slug": "computation-beyond-death",
-      "title": "Computation Beyond Death",
+      "title": "Computation beyond death",
       "date": "2026-09-29",
       "published": true,
       "blocks": [
