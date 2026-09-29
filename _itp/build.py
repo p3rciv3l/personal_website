@@ -60,8 +60,10 @@ def block(item):
         return (f'<details class="post-reveal"><summary>{e(item["warning"])} '
                 f'<span>{e(item["label"])}</span></summary>\n'
                 + '\n'.join(block(child) for child in item['blocks']) + '\n</details>')
+    if kind == 'text-media-grid':
+        return '<div class="text-media-grid"><p>' + inline(item['text']) + '</p>' + block({'type': 'image-grid', 'layout': item['layout'], 'images': item['images']}) + '</div>'
     if kind == 'image-grid':
-        return '<div class="media-grid">' + ''.join(block(child) for child in item['images']) + '</div>'
+        return '<div class="media-grid' + (' ' + e(item['layout']) if item.get('layout') else '') + '">' + ''.join(block(child) for child in item['images']) + '</div>'
     if kind == 'paragraph':
         return f'<p>{inline(item["text"])}</p>'
     if kind == 'heading':
@@ -78,8 +80,8 @@ def block(item):
                 media = f'<a href="{src}" aria-label="{e(item["alt"])} — open full image">{media}</a>'
         else:
             poster = f' poster="{url(item["poster"])}"' if kind == 'video' and item.get('poster') else ''
-            attrs = ' muted playsinline loop preload="metadata"' if kind == 'video' else ' preload="metadata"'
-            media = f'<{kind} src="{src}" controls{attrs}{poster} aria-label="{e(item["label"])}"><a href="{src}">Open {kind}</a></{kind}>'
+            attrs = ' autoplay muted playsinline loop preload="metadata" disablepictureinpicture disableremoteplayback' if kind == 'video' else ' preload="metadata"'
+            media = f'<{kind} src="{src}"{"" if kind == "video" else " controls"}{attrs}{poster} aria-label="{e(item["label"])}"><a href="{src}">Open {kind}</a></{kind}>'
         caption = f'<figcaption>{inline(item["caption"])}</figcaption>' if item.get('caption') else ''
         return f'<figure>{media}{caption}</figure>'
     if kind == 'quote':

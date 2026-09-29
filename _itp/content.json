@@ -13,7 +13,7 @@
     },
     {
       "slug": "hypercinema",
-      "title": "Comm Lab: Hypercinema",
+      "title": "Hypercinema",
       "code": "ITPG-GT 2004"
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "slug": "visual-language",
-      "title": "Comm Lab: visual language",
+      "title": "Visual language",
       "code": "ITPG-GT 2005"
     }
   ],
@@ -491,7 +491,8 @@
               "label": "Blue pushbutton illuminating an LED on the Arduino breadboard",
               "poster": "/itp/media/computation-beyond-death/03-poster.webp"
             }
-          ]
+          ],
+          "layout": "breadboard-pair"
         },
         {
           "type": "paragraph",
@@ -528,14 +529,11 @@
               "label": "Button demonstration with Arduino code, another angle",
               "poster": "/itp/media/computation-beyond-death/07-poster.webp"
             }
-          ]
+          ],
+          "layout": "button-triptych"
         },
         {
-          "type": "paragraph",
-          "text": "I then did the stuff with the pressure sensor! I was having fun and accidentally ripped the sensor off the breadboard."
-        },
-        {
-          "type": "image-grid",
+          "type": "text-media-grid",
           "images": [
             {
               "type": "video",
@@ -549,7 +547,9 @@
               "label": "Pressure-sensor wiring and Arduino code demonstration",
               "poster": "/itp/media/computation-beyond-death/09-poster.webp"
             }
-          ]
+          ],
+          "layout": "pressure-pair",
+          "text": "I then did the stuff with the pressure sensor! I was having fun and accidentally ripped the sensor off the breadboard."
         },
         {
           "type": "paragraph",
