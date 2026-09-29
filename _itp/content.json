@@ -560,6 +560,47 @@
           "text": "Looking forward to future assignments!"
         }
       ]
+    },
+    {
+      "course": "physical-computing",
+      "slug": "week-1",
+      "title": "Week 1",
+      "date": "2026-09-15",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Week 1 was tough. I completely failed and was super miserable in the process because I spent so much time failing haha."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the process of using the voltage regulator, completely melted multiple parts of my breadboard and (slightly) hurt my hand."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is me exploring various tools and parts. The yellow drawer of all the items is super fun and cool! Really lowers stress since everything is just there, and in abundance."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/physical-computing-week-1/week-one-collage.webp",
+          "alt": "Collage of five photos: Arduino parts, breadboard, component drawers and a multimeter.",
+          "width": 2400,
+          "height": 1570,
+          "zoom": true
+        },
+        {
+          "type": "paragraph",
+          "text": "I also played around with the multimeter and got some good readings that were accurate. That was the most successful part of this day."
+        },
+        {
+          "type": "image",
+          "src": "/itp/media/physical-computing-week-1/week-one-multimeter-collage.webp",
+          "alt": "Collage of three photos: testing a breadboard with the multimeter, an Arduino on a breadboard, and a powered circuit.",
+          "width": 2400,
+          "height": 1240,
+          "zoom": true
+        }
+      ]
     }
   ]
 }
