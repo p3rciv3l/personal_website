@@ -1,13 +1,13 @@
-/* Compact posts, using the existing site's typeface, colors and spacing. */
+/* ITP posts share a narrow text and media column. */
 .itp-article { --font-size-base: 1rem; max-width: 32rem; }
 .itp-article .itp-post { max-width: 100%; }
-.itp-post figure { margin: var(--space-medium) 0; }
+.itp-post figure { margin: .75rem 0 1rem; }
 .itp-post figure :is(img, video) {
   display: block;
   width: auto;
   height: auto;
-  max-width: min(100%, 20rem);
-  max-height: 17.5rem;
+  max-width: 100%;
+  max-height: 22rem;
   object-fit: contain;
   margin: 0;
 }
@@ -21,7 +21,7 @@
 .post-reveal > summary::-webkit-details-marker { display: none; }
 .post-reveal > summary::marker { content: ""; }
 .post-reveal > summary span { color: var(--color-link); text-decoration: underline; }
-.media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: var(--space-medium) 0; align-items: start; }
+.media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .2rem; margin: .75rem 0 1rem; align-items: start; max-width: 100%; }
 .itp-post .media-grid figure { margin: 0; min-width: 0; }
 .itp-post .media-grid img { max-width: 100%; }
 .conversation-panel { display: block; position: fixed; z-index: 10; box-sizing: border-box; width: min(36rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); padding: 0.75rem; border: 1px solid var(--color-text); background: var(--color-bg); box-shadow: 0 0.25rem 1rem #0003; font-size: 1rem; }

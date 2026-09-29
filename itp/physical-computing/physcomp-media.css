@@ -1,35 +1,35 @@
 /* PhysComp keeps the ITP typography and uses transparent space around media. */
-.physcomp-article { max-width: min(100%, 72rem); padding-bottom: 2.5rem; }
-.physcomp-article .itp-post { max-width: none; }
-.physcomp-article .itp-post > p { max-width: 39rem; line-height: 1.55; margin: 0 0 1.5rem; }
-.physcomp-article .itp-post > p:first-child { opacity: .75; margin-bottom: 2.5rem; }
+.physcomp-article { max-width: 39rem; padding-bottom: 2.5rem; }
+.physcomp-article .itp-post { max-width: 100%; }
+.physcomp-article .itp-post > p { max-width: 39rem; line-height: 1.55; margin: 0 0 1rem; }
+.physcomp-article .itp-post > p:first-child { opacity: .75; margin-bottom: 1.5rem; }
 .physcomp-article .itp-post > figure,
-.physcomp-article .itp-post > .media-grid { margin: 2.5rem 0 4rem; }
-.physcomp-article .itp-post figure { min-width: 0; overflow: hidden; background: #171d20; }
+.physcomp-article .itp-post > .media-grid { margin: .9rem 0 1.25rem; }
+.physcomp-article .itp-post figure { min-width: 0; overflow: hidden; background: transparent; }
 .physcomp-article .itp-post figure a { display: block; }
 .physcomp-article .itp-post figure :is(img,video) {
   display: block; width: 100%; max-width: none; max-height: none;
   object-fit: contain; height: auto; margin: 0;
 }
-.physcomp-article .itp-post > figure { max-width: 52rem; }
-.physcomp-article .itp-post > .media-grid { max-width: 72rem; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; align-items: stretch; }
-.physcomp-article .itp-post > .media-grid figure { display: flex; align-items: center; justify-content: center; margin: 0; min-height: 18rem; }
+.physcomp-article .itp-post > figure { max-width: 100%; }
+.physcomp-article .itp-post > .media-grid { max-width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .2rem; align-items: start; }
+.physcomp-article .itp-post > .media-grid figure { display: flex; align-items: center; justify-content: center; margin: 0; min-height: 0; }
 .physcomp-article .itp-post > .media-grid figure a { width: 100%; }
-.physcomp-article .itp-post > .media-grid figure img { max-height: 38rem; }
-.physcomp-article .itp-post > .media-grid figure video { max-height: 38rem; }
+.physcomp-article .itp-post > .media-grid figure img { max-height: 22rem; }
+.physcomp-article .itp-post > .media-grid figure video { max-height: 22rem; }
 .physcomp-article .itp-post > .media-grid:has(> figure:nth-child(3)) { grid-template-columns: repeat(3,minmax(0,1fr)); }
-.physcomp-article .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 31rem; }
+.physcomp-article .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 17rem; }
 @media(max-width: 680px) {
   .physcomp-article .itp-post > .media-grid,
-  .physcomp-article .itp-post > .media-grid:has(> figure:nth-child(3)) { grid-template-columns: 1fr; gap: 1.25rem; }
+  .physcomp-article .itp-post > .media-grid:has(> figure:nth-child(3)) { grid-template-columns: 1fr; gap: .2rem; }
   .physcomp-article .itp-post > .media-grid figure { min-height: 0; }
-  .physcomp-article .itp-post > .media-grid figure :is(video,img) { max-height: 34rem; }
+  .physcomp-article .itp-post > .media-grid figure :is(video,img) { max-height: 22rem; }
   .physcomp-article .itp-post > figure,
-  .physcomp-article .itp-post > .media-grid { margin: 2rem 0 3.25rem; }
+  .physcomp-article .itp-post > .media-grid { margin: .9rem 0 1.25rem; }
 }
 
 /* Later lab post: compact media and clear page-colored gaps, without dark letterboxes. */
-.physcomp-article:has(video) { max-width: 48rem; }
+.physcomp-article:has(video) { max-width: 39rem; }
 .physcomp-article:has(video) .itp-post > p { margin-bottom: 1rem; }
 .physcomp-article:has(video) .itp-post > p:first-child { margin-bottom: 1.6rem; }
 .physcomp-article:has(video) .itp-post > figure,
@@ -37,19 +37,26 @@
 .physcomp-article:has(video) .itp-post figure { background: transparent; overflow: visible; }
 .physcomp-article:has(video) .itp-post > figure { max-width: 28rem; }
 .physcomp-article:has(video) .itp-post > figure :is(img, video) { width: auto; max-width: 100%; max-height: 18rem; }
-.physcomp-article:has(video) .itp-post > .media-grid { width: fit-content; max-width: 100%; grid-template-columns: repeat(2,12rem); gap: .5rem; align-items: center; }
+.physcomp-article:has(video) .itp-post > .media-grid { width: min(100%, 26rem); max-width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .35rem; align-items: center; }
 .physcomp-article:has(video) .itp-post > .media-grid figure { min-height: 0; background: transparent; }
-.physcomp-article:has(video) .itp-post > .media-grid figure :is(img,video) { width: auto; max-width: 100%; max-height: 15rem; margin-inline: 0; }
-.physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) { grid-template-columns: repeat(3,10rem); }
-.physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 12rem; }
+.physcomp-article:has(video) .itp-post > .media-grid figure :is(img,video) { width: 100%; max-width: 100%; max-height: 19rem; margin-inline: 0; }
+.physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) { width: min(100%, 39rem); grid-template-columns: 1.35fr 1fr 1fr; }
+.physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 19rem; }
 @media(max-width:680px) {
   .physcomp-article:has(video) .itp-post > .media-grid,
   .physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) {
-    width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .55rem;
+    width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .35rem;
   }
   .physcomp-article:has(video) .itp-post > figure,
   .physcomp-article:has(video) .itp-post > .media-grid { margin: 1rem 0 1.5rem; }
   .physcomp-article:has(video) .itp-post > figure :is(img, video) { max-height: 17rem; }
-  .physcomp-article:has(video) .itp-post > .media-grid figure :is(img,video) { max-height: 14rem; margin-inline: 0; }
-  .physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 12rem; }
+  .physcomp-article:has(video) .itp-post > .media-grid figure :is(img,video) { max-height: 18rem; margin-inline: 0; }
+  .physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) video { max-height: 19rem; }
+}
+
+/* The mixed landscape/portrait triptych stays one compact collage. */
+.physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) { align-items: end; }
+@media(max-width:680px) {
+  .physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) > figure:first-child { grid-column: 1 / -1; }
+  .physcomp-article:has(video) .itp-post > .media-grid:has(> figure:nth-child(3)) > figure:first-child video { width: 100%; max-height: 15rem; }
 }

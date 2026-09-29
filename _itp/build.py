@@ -78,7 +78,8 @@ def block(item):
                 media = f'<a href="{src}" aria-label="{e(item["alt"])} — open full image">{media}</a>'
         else:
             poster = f' poster="{url(item["poster"])}"' if kind == 'video' and item.get('poster') else ''
-            media = f'<{kind} src="{src}" controls preload="metadata"{poster} aria-label="{e(item["label"])}"><a href="{src}">Open {kind}</a></{kind}>'
+            attrs = ' muted playsinline loop preload="metadata"' if kind == 'video' else ' preload="metadata"'
+            media = f'<{kind} src="{src}" controls{attrs}{poster} aria-label="{e(item["label"])}"><a href="{src}">Open {kind}</a></{kind}>'
         caption = f'<figcaption>{inline(item["caption"])}</figcaption>' if item.get('caption') else ''
         return f'<figure>{media}{caption}</figure>'
     if kind == 'quote':
@@ -96,7 +97,8 @@ def block(item):
 
 def page(title, path, content, back_href='/', back_label='homepage', post=False, conversation=False, physcomp=False):
     media_styles = '\n  <link rel="stylesheet" href="/itp/post-media.css">' if post else ''
-    post_script = '\n  <script src="/itp/post-conversation.js" defer></script>' if conversation else ''
+    post_script = ('\n  <script src="/itp/post-conversation.js" defer></script>' if conversation else '')
+    video_script = '\n  <script src="/itp/post-autoplay.js" defer></script>' if physcomp and 'computation-beyond-death' in path else ''
     physcomp_styles = '\n  <link rel="stylesheet" href="/itp/physical-computing/physcomp-media.css">' if physcomp else ''
     main_class = ' class="content-wrapper itp-article physcomp-article"' if physcomp else (' class="content-wrapper itp-article"' if post else '')
     return f'''<!DOCTYPE html>
@@ -109,7 +111,7 @@ def page(title, path, content, back_href='/', back_label='homepage', post=False,
   <meta name="referrer" content="no-referrer">
   <title>{e(title)} - Avinash Krishna</title>
   <link rel="canonical" href="https://www.avikrishna.com{path}">
-  <link rel="stylesheet" href="/styles/style.css">{media_styles}{physcomp_styles}{post_script}
+  <link rel="stylesheet" href="/styles/style.css">{media_styles}{physcomp_styles}{post_script}{video_script}
 </head>
 <body>
   <main{main_class}>

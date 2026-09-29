@@ -582,7 +582,7 @@
         },
         {
           "type": "image",
-          "src": "/itp/media/physical-computing-week-1/week-one-collage.jpg",
+          "src": "/itp/media/physical-computing-week-1/week-one-collage-spaced.jpg",
           "alt": "Collage of five photos: Arduino parts, breadboard, component drawers and a multimeter.",
           "width": 2400,
           "height": 1570,
@@ -594,7 +594,7 @@
         },
         {
           "type": "image",
-          "src": "/itp/media/physical-computing-week-1/week-one-multimeter-collage.jpg",
+          "src": "/itp/media/physical-computing-week-1/week-one-multimeter-collage-spaced.jpg",
           "alt": "Collage of three photos: testing a breadboard with the multimeter, an Arduino on a breadboard, and a powered circuit.",
           "width": 2400,
           "height": 1240,
