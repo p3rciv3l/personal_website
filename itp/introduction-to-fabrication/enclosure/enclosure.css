@@ -1,0 +1,14 @@
+/* Page-only typography: keep the original 32rem column and body padding. */
+.itp-article { --font-size-base: 1.15rem; }
+.itp-post .enclosure-grid { gap: .8rem; align-items: start; }
+.itp-post .enclosure-grid :is(img,video), .itp-post .enclosure-video-grid video { width:100%; height:auto; max-height:none; object-fit:cover; }
+.itp-post .enclosure-group-2 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.itp-post .enclosure-group-3 { grid-template-columns:repeat(3,minmax(0,1fr)); align-items:center; }
+.itp-post .enclosure-group-3 figure:nth-child(1) { grid-column:span 2; }
+.itp-post .enclosure-group-3 figure:nth-child(2) { grid-column:3; }
+.itp-post .enclosure-group-3 figure:nth-child(3) { grid-column:1; }
+.itp-post .enclosure-group-3 figure:nth-child(4) { grid-column:2; }
+.itp-post .enclosure-group-3 figure:nth-child(5) { grid-column:3; }
+.itp-post .enclosure-group-4, .itp-post .enclosure-group-6 { grid-template-columns:1fr; max-width:60%; }
+.itp-post .enclosure-video-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:.8rem; align-items:center; }
+.itp-post .enclosure-grid a { display:block; }

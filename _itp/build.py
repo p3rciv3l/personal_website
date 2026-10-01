@@ -100,7 +100,9 @@ def block(item):
 def page(title, path, content, back_href='/', back_label='homepage', post=False, conversation=False, physcomp=False):
     media_styles = '\n  <link rel="stylesheet" href="/itp/post-media.css">' if post else ''
     post_script = ('\n  <script src="/itp/post-conversation.js" defer></script>' if conversation else '')
-    video_script = '\n  <script src="/itp/post-autoplay.js" defer></script>' if physcomp and 'computation-beyond-death' in path else ''
+    video_script = '\n  <script src="/itp/post-autoplay.js" defer></script>' if (physcomp and 'computation-beyond-death' in path) or '/enclosure/' in path else ''
+    if '/enclosure/' in path:
+        media_styles += '\n  <link rel="stylesheet" href="/itp/introduction-to-fabrication/enclosure/enclosure.css">'
     physcomp_styles = '\n  <link rel="stylesheet" href="/itp/physical-computing/physcomp-media.css">' if physcomp else ''
     main_class = ' class="content-wrapper itp-article physcomp-article"' if physcomp else (' class="content-wrapper itp-article"' if post else '')
     return f'''<!DOCTYPE html>

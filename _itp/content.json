@@ -605,6 +605,327 @@
           "text": "Success will come soon!"
         }
       ]
+    },
+    {
+      "course": "introduction-to-fabrication",
+      "slug": "enclosure",
+      "title": "Enclosure",
+      "date": "2026-10-01",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This was quite the project. My back hurts."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the project, I wanted to lay it all on line in terms of getting a successful version working by class time. As usual, I got kinda close."
+        },
+        {
+          "type": "paragraph",
+          "text": "The goal here was to make an enclosure for my headphones while maintaining an Art Deco theme. I took inspiration from the Bullcock Wilshire Building in Los Angeles and directly copied it's grille for my headphones case. I also specifically wanted to use teal or turquoise acrylic as many Art Deco buildings specifically use this color in their glazed terracotta façades."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-1",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-01.jpg",
+              "width": 789,
+              "height": 1045,
+              "alt": "The Bullcock Wilshire Building in Los Angeles.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-02.jpg",
+              "width": 362,
+              "height": 543,
+              "alt": "Turquoise Art Deco grille detail.",
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I also wanted to use two materials here and both engrave and cut on the laser machine. So, I decided to make fairly intricate walls of the case with cut acrylic and used wood for my lid. The base was an engraved acrylic."
+        },
+        {
+          "type": "paragraph",
+          "text": "As usual, before started, I mocked everything up in Blender using AI. The blender looked amazing after working with it for a while, and I figured it was worth it to spend more on acrylic given how much effort I was going to put in. After going to Canal Plastics, I got an 18x32in sheet of acrylic, which gave me lots of room to fail."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-2",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-03.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Clear acrylic sample at Canal Plastics.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-04.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Teal acrylic sample at Canal Plastics.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-05.jpg",
+              "width": 2316,
+              "height": 3088,
+              "alt": "Avi at the shop with his headphones.",
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I then started to laser cut. I started with the wall, which I split up into two laser cuts: the cut for the left/right/front and the cut for the back. The longer cut was to be best bended around a jig and placed atop the bottom. I got super close to finishing this, but the laser gave up at 9:55PM in heartbreaking fashion."
+        },
+        {
+          "type": "paragraph",
+          "text": "I started it up on Wednesday morning and laser cut it five times because I was super paranoid. I then laser cut the bottom and engraved it too. I'm skipping over some details here in that there were many rounds of iteration on illustrator files here that sucked."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-3",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-08.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Laser-cut teal grille wall.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-09.jpg",
+              "width": 4284,
+              "height": 5712,
+              "alt": "Acrylic wall inside the laser cutter.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-10.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Acrylic pieces from the cutting process.",
+              "zoom": true
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/enclosure/video-6.mp4",
+              "poster": "/itp/media/enclosure/video-6-poster.jpg",
+              "label": "Laser cutting, sped up to five seconds, silent."
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/enclosure/video-7.mp4",
+              "poster": "/itp/media/enclosure/video-7-poster.jpg",
+              "label": "Laser cutting, sped up to five seconds, silent."
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-11.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Laser cutting the grille wall.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-12.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Cut acrylic grille walls.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-13.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Engraved acrylic headphone-case base.",
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "There was a fun part where I actually used the Riemann sum to approximate the curve of my headphones and ported that to the curve of the case. Anyway, this was a total waste of tile because my measurements, even with the digital caliper and a jig, were probably not accurate. Or I messed up the math."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-4",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-14.jpg",
+              "width": 3511,
+              "height": 2973,
+              "alt": "Curve measurements drawn on acrylic.",
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Anyway, my wooden pieces weren't the right size for the lid so I just had them as two slabs that I engraved and decided I'd glue together later."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the jig I just used four pieces of wood to bend the acrylic against."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-5",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-15.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Acrylic wall and wooden bending jig.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-16.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Engraved wooden lid slabs and jig pieces.",
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Eventually I had all the pieces together and what remained was the bending the sides across the jig and then cementing everything together."
+        },
+        {
+          "type": "paragraph",
+          "text": "The thinking for attaching the lid was to use a small, acrylic chip and a hole in the wood to hold a hinge screw with a spring."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-6",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-17.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Small acrylic hinge chips.",
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Naturally, the first thing I did was snap my walls in half. Obviously an accident."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-7",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-18.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Wall bent around the wooden jig.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-19.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Wall held against the jig with clamps.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-20.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Bent acrylic wall.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-21.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Broken acrylic wall sections.",
+              "zoom": true
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Anyway, I attempted to bend everything to the shape I desired anyway but couldn't quite get it."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-video-grid",
+          "images": [
+            {
+              "type": "video",
+              "src": "/itp/media/enclosure/bending-1.mp4",
+              "poster": "/itp/media/enclosure/bending-1-poster.jpg",
+              "label": "Bending the acrylic wall, sped up to five seconds, silent."
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/enclosure/bending-2.mp4",
+              "poster": "/itp/media/enclosure/bending-2-poster.jpg",
+              "label": "Bending the acrylic wall, sped up to five seconds, silent."
+            },
+            {
+              "type": "video",
+              "src": "/itp/media/enclosure/bending-3.mp4",
+              "poster": "/itp/media/enclosure/bending-3-poster.jpg",
+              "label": "Bending the acrylic wall, sped up to five seconds, silent."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I was too tired to actually get a photo of the final result--not exactly a looker--but here are some in process photos where the components look good. Sorry for not finishing the assignment again."
+        },
+        {
+          "type": "image-grid",
+          "layout": "enclosure-grid enclosure-group-8",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-22.jpg",
+              "width": 5712,
+              "height": 4284,
+              "alt": "Headphones inside the in-process enclosure.",
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/enclosure/image-23.jpg",
+              "width": 3024,
+              "height": 4032,
+              "alt": "Case parts clamped during assembly.",
+              "zoom": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
