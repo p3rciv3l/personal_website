@@ -635,7 +635,8 @@
               "width": 789,
               "height": 1045,
               "alt": "The Bullcock Wilshire Building in Los Angeles.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -643,7 +644,8 @@
               "width": 362,
               "height": 543,
               "alt": "Turquoise Art Deco grille detail.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         },
@@ -665,7 +667,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Clear acrylic sample at Canal Plastics.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -673,7 +676,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Teal acrylic sample at Canal Plastics.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -681,7 +685,8 @@
               "width": 2316,
               "height": 3088,
               "alt": "Avi at the shop with his headphones.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         },
@@ -703,7 +708,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Laser-cut teal grille wall.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -711,7 +717,8 @@
               "width": 4284,
               "height": 5712,
               "alt": "Acrylic wall inside the laser cutter.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -719,19 +726,22 @@
               "width": 3024,
               "height": 4032,
               "alt": "Acrylic pieces from the cutting process.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "video",
               "src": "/itp/media/enclosure/video-6.mp4",
               "poster": "/itp/media/enclosure/video-6-poster.jpg",
-              "label": "Laser cutting, sped up to five seconds, silent."
+              "label": "Laser cutting, sped up to five seconds, silent.",
+              "lazy": true
             },
             {
               "type": "video",
               "src": "/itp/media/enclosure/video-7.mp4",
               "poster": "/itp/media/enclosure/video-7-poster.jpg",
-              "label": "Laser cutting, sped up to five seconds, silent."
+              "label": "Laser cutting, sped up to five seconds, silent.",
+              "lazy": true
             },
             {
               "type": "image",
@@ -739,7 +749,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Laser cutting the grille wall.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -747,7 +758,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Cut acrylic grille walls.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -755,7 +767,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Engraved acrylic headphone-case base.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         },
@@ -773,7 +786,8 @@
               "width": 3511,
               "height": 2973,
               "alt": "Curve measurements drawn on acrylic.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         },
@@ -795,7 +809,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Acrylic wall and wooden bending jig.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -803,7 +818,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Engraved wooden lid slabs and jig pieces.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         },
@@ -825,7 +841,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Small acrylic hinge chips.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         },
@@ -843,7 +860,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Wall bent around the wooden jig.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -851,7 +869,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Wall held against the jig with clamps.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -859,7 +878,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Bent acrylic wall.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -867,7 +887,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Broken acrylic wall sections.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         },
@@ -883,19 +904,22 @@
               "type": "video",
               "src": "/itp/media/enclosure/bending-1.mp4",
               "poster": "/itp/media/enclosure/bending-1-poster.jpg",
-              "label": "Bending the acrylic wall, sped up to five seconds, silent."
+              "label": "Bending the acrylic wall, sped up to five seconds, silent.",
+              "lazy": true
             },
             {
               "type": "video",
               "src": "/itp/media/enclosure/bending-2.mp4",
               "poster": "/itp/media/enclosure/bending-2-poster.jpg",
-              "label": "Bending the acrylic wall, sped up to five seconds, silent."
+              "label": "Bending the acrylic wall, sped up to five seconds, silent.",
+              "lazy": true
             },
             {
               "type": "video",
               "src": "/itp/media/enclosure/bending-3.mp4",
               "poster": "/itp/media/enclosure/bending-3-poster.jpg",
-              "label": "Bending the acrylic wall, sped up to five seconds, silent."
+              "label": "Bending the acrylic wall, sped up to five seconds, silent.",
+              "lazy": true
             }
           ]
         },
@@ -913,7 +937,8 @@
               "width": 5712,
               "height": 4284,
               "alt": "Headphones inside the in-process enclosure.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             },
             {
               "type": "image",
@@ -921,7 +946,8 @@
               "width": 3024,
               "height": 4032,
               "alt": "Case parts clamped during assembly.",
-              "zoom": true
+              "zoom": true,
+              "responsive": true
             }
           ]
         }

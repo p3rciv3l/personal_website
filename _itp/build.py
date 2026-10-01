@@ -75,13 +75,21 @@ def block(item):
         src = url(item['src'])
         if kind == 'image':
             dimensions = f' width="{int(item["width"])}" height="{int(item["height"])}"' if 'width' in item and 'height' in item else ''
-            media = f'<img src="{src}" alt="{e(item["alt"])}"{dimensions} loading="lazy" decoding="async">'
+            if item.get('responsive'):
+                stem = src.rsplit('.', 1)[0]
+                media = f'<img src="{stem}-480.webp" srcset="{stem}-480.webp 480w, {stem}-960.webp 960w" sizes="(max-width: 600px) 50vw, 256px" alt="{e(item["alt"])}"{dimensions} loading="lazy" decoding="async">'
+            else:
+                media = f'<img src="{src}" alt="{e(item["alt"])}"{dimensions} loading="lazy" decoding="async">'
             if item.get('zoom'):
                 media = f'<a href="{src}" aria-label="{e(item["alt"])} — open full image">{media}</a>'
         else:
             poster = f' poster="{url(item["poster"])}"' if kind == 'video' and item.get('poster') else ''
             attrs = ' autoplay muted playsinline loop preload="metadata" disablepictureinpicture disableremoteplayback' if kind == 'video' else ' preload="metadata"'
             media = f'<{kind} src="{src}"{"" if kind == "video" else " controls"}{attrs}{poster} aria-label="{e(item["label"])}"><a href="{src}">Open {kind}</a></{kind}>'
+        if kind == 'video' and item.get('lazy'):
+            media = media.replace(f'src="{src}"', f'data-src="{src}"').replace(' autoplay', '').replace('preload="metadata"', 'preload="none"')
+            if item.get('poster'):
+                media = media.replace(f'poster="{url(item["poster"])}"', f'data-poster="{url(item["poster"]).rsplit(".", 1)[0]}-480.webp"')
         caption = f'<figcaption>{inline(item["caption"])}</figcaption>' if item.get('caption') else ''
         return f'<figure>{media}{caption}</figure>'
     if kind == 'quote':
@@ -102,7 +110,8 @@ def page(title, path, content, back_href='/', back_label='homepage', post=False,
     post_script = ('\n  <script src="/itp/post-conversation.js" defer></script>' if conversation else '')
     video_script = '\n  <script src="/itp/post-autoplay.js" defer></script>' if (physcomp and 'computation-beyond-death' in path) or '/enclosure/' in path else ''
     if '/enclosure/' in path:
-        media_styles += '\n  <link rel="stylesheet" href="/itp/introduction-to-fabrication/enclosure/enclosure.css">'
+        video_script = '\n  <script src="/itp/introduction-to-fabrication/enclosure/enclosure-media.js?v=2" defer></script>'
+        media_styles += '\n  <link rel="stylesheet" href="/itp/introduction-to-fabrication/enclosure/enclosure.css?v=2">'
     physcomp_styles = '\n  <link rel="stylesheet" href="/itp/physical-computing/physcomp-media.css">' if physcomp else ''
     main_class = ' class="content-wrapper itp-article physcomp-article"' if physcomp else (' class="content-wrapper itp-article"' if post else '')
     return f'''<!DOCTYPE html>
