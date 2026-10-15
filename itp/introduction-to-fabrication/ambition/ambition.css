@@ -1,0 +1,27 @@
+:root { color-scheme: light; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #111; background: #fff; --gap: 8px; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; }
+main { padding: 24px; }
+h1 { margin: 0 0 24px; font-size: 24px; line-height: 1; font-weight: 700; letter-spacing: -.075em; font-kerning: normal; }
+.collage { position: relative; margin-bottom: 48px; }
+.collage:last-child { margin-bottom: 0; }
+.composition { display: flex; gap: var(--gap); min-width: 0; }
+.column { flex-direction: column; }
+.row > * { flex: 1; min-width: 0; }
+.photo { display: block; min-width: 0; line-height: 0; cursor: zoom-in; color: inherit; }
+.photo img { display: block; width: 100%; height: auto; }
+.photo:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
+.collage.laid-out .composition { display: contents; }
+.collage.laid-out .photo { position: absolute; }
+.viewer { position: fixed; inset: 0; margin: 0; width: 100%; height: 100%; max-width: none; max-height: none; padding: 32px; border: 0; background: #fff; overflow: hidden; outline: none; cursor: zoom-out; }
+.viewer[open] { display: flex; align-items: center; justify-content: center; animation: reveal 140ms ease-out both; }
+.viewer::backdrop { background: #fff; }
+.viewer > img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; cursor: default; animation: settle 140ms ease-out both; }
+.close { position: absolute; z-index: 1; right: 8px; top: 8px; width: 44px; height: 44px; padding: 10px; border: 0; background: #fff; color: #111; cursor: pointer; }
+.close svg { fill: none; stroke: currentColor; stroke-width: 1.5; }
+.close:focus-visible { outline: 2px solid #111; outline-offset: -4px; }
+body:has(.viewer[open]) { overflow: hidden; }
+@keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
+@keyframes settle { from { transform: scale(.99); } to { transform: scale(1); } }
+@media(max-width: 600px) { :root { --gap: 6px; } main { padding: 16px; } .collage { margin-bottom: 32px; } .viewer { padding: 16px; } }
+@media(prefers-reduced-motion: reduce) { .viewer[open], .viewer > img { animation: none; } }

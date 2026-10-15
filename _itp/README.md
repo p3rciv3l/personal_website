@@ -69,3 +69,7 @@ The `conversation` inline link opens its `src` in a scrollable viewer on hover, 
 ## Link-only visibility
 
 Every generated page has `noindex, nofollow, noarchive` and a `no-referrer` policy. There are no incoming links from the rest of the site. Do not add a robots.txt disallow rule for ITP: crawlers must be able to read the noindex directive. This is an unlisted journal, not authentication; anyone who gets or guesses a link can read it, and the repository is public.
+
+## Ambition portfolio
+
+The Ambition post uses `presentation: "portfolio"` and `_itp/portfolio.py`, with nested row/column compositions in `content.json`. Per Avi’s explicit brief, it overrides the journal’s usual presentation: white, 24px Helvetica, tight letter spacing, one visible word, full-resolution images, eager preloading, and an in-page image viewer. Keep the supplied pixel dimensions and do not generate resized alternatives. The full mirror image is the supplied `love.png`.
