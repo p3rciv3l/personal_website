@@ -29,5 +29,5 @@ h1.over-image { color: #fff; }
 body:has(.viewer[open]) { overflow: hidden; }
 @keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
 @keyframes settle { from { transform: scale(.99); } to { transform: scale(1); } }
-@media(max-width: 600px) { :root { --gap: 6px; } main { padding: 64px 16px 16px; } h1 { top: 16px; left: 8px; } .viewer { padding: 16px; } }
+@media(max-width: 600px) { :root { --gap: 6px; } main { padding: 56px 16px 16px; } h1 { top: 16px; left: 8px; } .viewer { padding: 16px; } }
 @media(prefers-reduced-motion: reduce) { h1 { transition: none; } .viewer[open], .viewer > img { animation: none; } }
