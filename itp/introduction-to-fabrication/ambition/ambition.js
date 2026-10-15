@@ -18,7 +18,10 @@
   // Every composition is represented as height = m * width + b.
   // Accounting for the gutters keeps every image uncropped and every gap identical.
   function measure(node, gap) {
-    if (node.classList.contains('photo')) return { node, m: +node.dataset.height / +node.dataset.width, b: 0 };
+    if (node.classList.contains('photo')) {
+      const isLead = node.getAttribute('href') === '/itp/media/ambition/3-5.jpeg';
+      return { node, m: isLead ? 1 : +node.dataset.height / +node.dataset.width, b: 0 };
+    }
     const children = [...node.children].map(child => measure(child, gap));
     const axis = node.dataset.axis;
     if (axis === 'column') return { node, children, axis, m: children.reduce((s, c) => s + c.m, 0), b: children.reduce((s, c) => s + c.b, 0) + gap * (children.length - 1) };
