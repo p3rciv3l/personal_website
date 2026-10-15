@@ -1,9 +1,10 @@
 :root { color-scheme: light; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #111; background: #fff; --gap: 8px; }
 * { box-sizing: border-box; }
 body { margin: 0; background: #fff; }
-main { padding: 24px; }
-h1 { margin: 0 0 24px; font-size: 24px; line-height: 1; font-weight: 700; letter-spacing: -.075em; font-kerning: normal; }
-.collage { position: relative; margin-bottom: 48px; }
+main { padding: 72px 24px 24px; }
+h1 { position: fixed; top: 24px; left: 24px; z-index: 2; pointer-events: none; margin: 0; font-size: 24px; line-height: 1; font-weight: 700; letter-spacing: -.075em; font-kerning: normal; }
+h1.over-image { color: #fff; }
+.collage { position: relative; margin-bottom: var(--gap); }
 .collage:last-child { margin-bottom: 0; }
 .composition { display: flex; gap: var(--gap); min-width: 0; }
 .column { flex-direction: column; }
@@ -23,5 +24,5 @@ h1 { margin: 0 0 24px; font-size: 24px; line-height: 1; font-weight: 700; letter
 body:has(.viewer[open]) { overflow: hidden; }
 @keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
 @keyframes settle { from { transform: scale(.99); } to { transform: scale(1); } }
-@media(max-width: 600px) { :root { --gap: 6px; } main { padding: 16px; } .collage { margin-bottom: 32px; } .viewer { padding: 16px; } }
+@media(max-width: 600px) { :root { --gap: 6px; } main { padding: 64px 16px 16px; } h1 { top: 16px; left: 16px; } .viewer { padding: 16px; } }
 @media(prefers-reduced-motion: reduce) { .viewer[open], .viewer > img { animation: none; } }

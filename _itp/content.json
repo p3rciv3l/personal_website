@@ -1048,16 +1048,16 @@
                   "alt": "Clock tower engraving in detail"
                 },
                 {
-                  "src": "/itp/media/ambition/2-3.jpeg",
-                  "width": 3024,
-                  "height": 4032,
-                  "alt": "Engraved facade and windows"
-                },
-                {
                   "src": "/itp/media/ambition/2-7.jpeg",
                   "width": 1951,
                   "height": 2601,
                   "alt": "Close-up of the engraved facade"
+                },
+                {
+                  "src": "/itp/media/ambition/2-3.jpeg",
+                  "width": 3024,
+                  "height": 4032,
+                  "alt": "Engraved facade and windows"
                 }
               ]
             }
@@ -1070,16 +1070,16 @@
               "axis": "row",
               "items": [
                 {
-                  "src": "/itp/media/ambition/3-1.jpeg",
-                  "width": 4032,
-                  "height": 3024,
-                  "alt": "Teal lattice headphone case with a wooden lid"
-                },
-                {
                   "src": "/itp/media/ambition/3-5.jpeg",
                   "width": 3024,
                   "height": 4032,
                   "alt": "Closed headphone case in three-quarter view"
+                },
+                {
+                  "src": "/itp/media/ambition/3-1.jpeg",
+                  "width": 4032,
+                  "height": 3024,
+                  "alt": "Teal lattice headphone case with a wooden lid"
                 },
                 {
                   "src": "/itp/media/ambition/3-4.jpeg",

@@ -1,5 +1,20 @@
 (() => {
   const collages = [...document.querySelectorAll('.collage')];
+  const title = document.querySelector('h1');
+  const photos = [...document.querySelectorAll('.photo')];
+  let titleFrame;
+  function updateTitle() {
+    titleFrame = null;
+    const heading = title.getBoundingClientRect();
+    title.classList.toggle('over-image', photos.some(photo => {
+      const rect = photo.getBoundingClientRect();
+      return rect.left < heading.right && rect.right > heading.left && rect.top < heading.bottom && rect.bottom > heading.top;
+    }));
+  }
+  function scheduleTitle() {
+    if (titleFrame == null) titleFrame = requestAnimationFrame(updateTitle);
+  }
+  window.addEventListener('scroll', scheduleTitle, { passive: true });
   // Every composition is represented as height = m * width + b.
   // Accounting for the gutters keeps every image uncropped and every gap identical.
   function measure(node, gap) {
@@ -48,6 +63,7 @@
       section.style.height = `${height}px`;
       section.classList.add('laid-out');
     }
+    scheduleTitle();
   }
   layout();
   new ResizeObserver(layout).observe(document.querySelector('main'));
