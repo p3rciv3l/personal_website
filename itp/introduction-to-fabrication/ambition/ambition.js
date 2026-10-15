@@ -72,9 +72,21 @@
   new ResizeObserver(layout).observe(document.querySelector('main'));
   const viewer = document.querySelector('.viewer');
   const expanded = viewer.querySelector('img');
+  const status = viewer.querySelector('.viewer-status');
   let trigger;
+  let currentIndex = 0;
+  function showImage(index) {
+    currentIndex = (index + photos.length) % photos.length;
+    const img = photos[currentIndex].querySelector('img');
+    expanded.src = img.currentSrc || img.src;
+    expanded.alt = img.alt;
+    status.textContent = `${currentIndex + 1} of ${photos.length}: ${img.alt}`;
+    for (const offset of [-1, 1]) {
+      photos[(currentIndex + offset + photos.length) % photos.length].querySelector('img').decode?.().catch(() => {});
+    }
+  }
   const close = () => viewer.close();
-  document.querySelectorAll('.photo').forEach(link => {
+  photos.forEach((link, index) => {
     const img = link.querySelector('img');
     // Eager HTML loads + preload hints fetch the exact same full-resolution URL.
     // Decode on intent so opening never waits for a second, larger download.
@@ -85,12 +97,20 @@
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       trigger = link;
-      expanded.src = img.currentSrc || img.src;
-      expanded.alt = img.alt;
+      showImage(index);
       viewer.showModal();
     });
   });
   viewer.querySelector('.close').addEventListener('click', close);
+  viewer.querySelector('.previous').addEventListener('click', () => showImage(currentIndex - 1));
+  viewer.querySelector('.next').addEventListener('click', () => showImage(currentIndex + 1));
+  viewer.addEventListener('keydown', event => {
+    if (!viewer.open || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showImage(currentIndex + (event.key === 'ArrowLeft' ? -1 : 1));
+    }
+  });
   viewer.addEventListener('click', event => { if (event.target === viewer) close(); });
   viewer.addEventListener('close', () => { expanded.removeAttribute('src'); trigger?.focus({ preventScroll: true }); });
 })();

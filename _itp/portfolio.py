@@ -35,7 +35,10 @@ def render_portfolio(post, path, marker):
   <main><h1>Ambition</h1>{sections}</main>
   <dialog class="viewer" aria-label="Enlarged photograph">
     <button class="close" aria-label="Close enlarged photograph" autofocus><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <button class="previous" aria-label="Previous photograph"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
     <img alt="">
+    <button class="next" aria-label="Next photograph"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+    <span class="viewer-status" role="status" aria-live="polite"></span>
   </dialog>
 </body>
 </html>

@@ -23,11 +23,16 @@ h1.over-image { color: #fff; }
 .viewer[open] { display: flex; align-items: center; justify-content: center; animation: reveal 140ms ease-out both; }
 .viewer::backdrop { background: #fff; }
 .viewer > img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; cursor: default; animation: settle 140ms ease-out both; }
-.close { position: absolute; z-index: 1; right: 8px; top: 8px; width: 44px; height: 44px; padding: 10px; border: 0; background: #fff; color: #111; cursor: pointer; }
-.close svg { fill: none; stroke: currentColor; stroke-width: 1.5; }
-.close:focus-visible { outline: 2px solid #111; outline-offset: -4px; }
+.close, .previous, .next { position: absolute; z-index: 1; right: 8px; top: 8px; width: 44px; height: 44px; padding: 10px; border: 0; background: #fff; color: #111; cursor: pointer; }
+.viewer button svg { fill: none; stroke: currentColor; stroke-width: 1.5; }
+.viewer button:focus-visible { outline: 2px solid #111; outline-offset: -4px; }
 body:has(.viewer[open]) { overflow: hidden; }
 @keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
 @keyframes settle { from { transform: scale(.99); } to { transform: scale(1); } }
 @media(max-width: 600px) { :root { --gap: 6px; } main { padding: 56px 16px 16px; } h1 { top: 16px; left: 8px; } .viewer { padding: 16px; } }
 @media(prefers-reduced-motion: reduce) { h1 { transition: none; } .viewer[open], .viewer > img { animation: none; } }
+
+.previous, .next { top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.9); }
+.previous { left: 8px; right: auto; }
+.next { right: 8px; }
+.viewer-status { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
