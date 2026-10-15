@@ -1076,16 +1076,21 @@
                   "alt": "Closed headphone case in three-quarter view"
                 },
                 {
-                  "src": "/itp/media/ambition/3-1.jpeg",
-                  "width": 4032,
-                  "height": 3024,
-                  "alt": "Teal lattice headphone case with a wooden lid"
-                },
-                {
-                  "src": "/itp/media/ambition/3-4.jpeg",
-                  "width": 3024,
-                  "height": 4032,
-                  "alt": "Headphones resting inside the teal case"
+                  "axis": "column",
+                  "items": [
+                    {
+                      "src": "/itp/media/ambition/3-1.jpeg",
+                      "width": 4032,
+                      "height": 3024,
+                      "alt": "Teal lattice headphone case with a wooden lid"
+                    },
+                    {
+                      "src": "/itp/media/ambition/3-4.jpeg",
+                      "width": 3024,
+                      "height": 4032,
+                      "alt": "Headphones resting inside the teal case"
+                    }
+                  ]
                 }
               ]
             },
