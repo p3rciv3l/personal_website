@@ -11,6 +11,9 @@ h1.over-image { color: #fff; }
 .row > * { flex: 1; min-width: 0; }
 .photo { display: block; min-width: 0; line-height: 0; cursor: zoom-in; color: inherit; }
 .photo img { display: block; width: 100%; height: auto; }
+/* Frame the facade detail around its repeating window bays, using the original pixels. */
+.photo[href="/itp/media/ambition/2-3.jpeg"] { overflow: hidden; }
+.photo[href="/itp/media/ambition/2-3.jpeg"] img { transform: scale(2.2); transform-origin: 54% 66%; }
 .photo:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
 .collage.laid-out .composition { display: contents; }
 .collage.laid-out .photo { position: absolute; }
