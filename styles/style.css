@@ -119,6 +119,7 @@ body {
 }
 
 .name-image-container {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,7 +172,7 @@ body {
 }
 
 .bio-section {
-    line-height: var(--line-height-spaced);
+    line-height: var(--line-height-base);
 }
 
 .main-content {
@@ -319,17 +320,17 @@ img {
     html,
     body {
         max-width: 100%;
-        overflow-x: hidden;
+
     }
 
     body {
-        padding: 1rem 1rem 1.25rem;
+        padding: 1.5rem 1.25rem 2.5rem;
         line-height: var(--line-height-spaced);
         -webkit-text-size-adjust: 100%;
     }
 
     .home-page {
-        padding-top: 3.25rem;
+        padding-top: 1.5rem;
     }
 
     .content-wrapper {
@@ -347,22 +348,32 @@ img {
     }
 
     .name-image-container {
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
         width: 100%;
     }
 
     .main-name {
+        font-size: clamp(1.75rem, 7.5vw, 2.25rem);
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+        max-width: 9ch;
         white-space: normal;
+        text-wrap: balance;
     }
 
     .profile-image {
-        max-width: 9rem;
-        margin-top: var(--space-medium);
+        width: clamp(5rem, 24vw, 7rem);
+        max-width: 30%;
+        flex-shrink: 0;
+        margin: 0;
     }
 
     .contact-bio-container {
         width: 100%;
-        gap: var(--space-medium);
+        gap: 1.25rem;
         margin-top: 0;
     }
 
@@ -370,7 +381,7 @@ img {
     .bio-section,
     p,
     li {
-        line-height: var(--line-height-spaced);
+        line-height: 1.45;
     }
 
     .main-content {
@@ -383,8 +394,8 @@ img {
     }
 
     h2 {
-        margin-top: var(--space-large);
-        margin-bottom: var(--space-small);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
     ul {
@@ -392,7 +403,7 @@ img {
     }
 
     li {
-        margin-bottom: var(--space-small);
+        margin-bottom: 0.5rem;
         padding-left: 0.85em;
         text-indent: -0.85em;
     }
@@ -432,5 +443,38 @@ img {
 
     .painting-image {
         max-width: 100%;
+    }
+}
+
+/* Keep intrinsic content from widening narrow screens. */
+.header-section-layout > *,
+.contact-bio-container {
+    min-width: 0;
+}
+
+a {
+    text-underline-offset: 0.1em;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+    :root {
+        --font-size-base: 1.125rem;
+    }
+
+    .header-section-layout {
+        gap: 1.25rem;
+    }
+
+    .main-content > h2:first-child {
+        margin-top: 0;
+    }
+
+    .bio-section p {
+        margin-bottom: 0;
     }
 }
