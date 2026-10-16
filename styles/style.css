@@ -348,10 +348,9 @@ img {
     }
 
     .name-image-container {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
         width: 100%;
     }
 
@@ -359,7 +358,7 @@ img {
         font-size: clamp(1.75rem, 7.5vw, 2.25rem);
         line-height: 1.08;
         letter-spacing: -0.025em;
-        max-width: 9ch;
+        max-width: 100%;
         white-space: normal;
         text-wrap: balance;
     }
