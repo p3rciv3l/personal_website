@@ -324,13 +324,13 @@ img {
     }
 
     body {
-        padding: 1.5rem 1.25rem 2.5rem;
+        padding: 1.25rem 1.125rem 1.5rem;
         line-height: var(--line-height-spaced);
         -webkit-text-size-adjust: 100%;
     }
 
     .home-page {
-        padding-top: 1.5rem;
+        padding-top: 1.25rem;
     }
 
     .content-wrapper {
@@ -365,7 +365,7 @@ img {
     }
 
     .profile-image {
-        width: clamp(5rem, 24vw, 7rem);
+        width: clamp(4.5rem, 20vw, 5.5rem);
         max-width: 30%;
         flex-shrink: 0;
         margin: 0;
@@ -373,7 +373,7 @@ img {
 
     .contact-bio-container {
         width: 100%;
-        gap: 1.25rem;
+        gap: 0.875rem;
         margin-top: 0;
     }
 
@@ -381,7 +381,7 @@ img {
     .bio-section,
     p,
     li {
-        line-height: 1.45;
+        line-height: 1.25;
     }
 
     .main-content {
@@ -394,8 +394,8 @@ img {
     }
 
     h2 {
-        margin-top: 1.5rem;
-        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
     }
 
     ul {
@@ -403,7 +403,7 @@ img {
     }
 
     li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.125rem;
         padding-left: 0.85em;
         text-indent: -0.85em;
     }
@@ -467,7 +467,7 @@ a:focus-visible {
     }
 
     .header-section-layout {
-        gap: 1.25rem;
+        gap: 0.875rem;
     }
 
     .main-content > h2:first-child {
