@@ -115,3 +115,30 @@
 /* Full column for the two pressure clips beside the short text. */
 .physcomp-article:has(video) .itp-post > .text-media-grid > .media-grid.pressure-pair { width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; }
 .physcomp-article:has(video) .itp-post > .text-media-grid .media-grid.pressure-pair figure video { width: 100%; max-height: none; height: auto; }
+
+/* Robots: a large photo collage alongside the usual narrow reading column. */
+.physcomp-article .itp-post > .media-grid.robot-collage {
+  width: min(72rem, calc(100vw - 2.5rem)); max-width: none;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: .4rem; align-items: stretch;
+}
+.physcomp-article .itp-post > .robot-collage > figure {
+  grid-column: span 4; aspect-ratio: 3 / 4; overflow: hidden;
+}
+.physcomp-article .itp-post > .robot-collage > figure:nth-child(-n+2) {
+  grid-column: span 6; aspect-ratio: 4 / 3;
+}
+.physcomp-article .itp-post > .robot-collage > figure:nth-child(n+6):nth-child(-n+9) {
+  grid-column: span 3;
+}
+.physcomp-article .itp-post > .robot-collage figure a { display: block; height: 100%; }
+.physcomp-article .itp-post > .robot-collage figure img {
+  width: 100%; height: 100%; max-height: none; object-fit: cover;
+}
+@media(max-width: 680px) {
+  .physcomp-article .itp-post > .media-grid.robot-collage {
+    width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .3rem;
+  }
+  .physcomp-article .itp-post > .robot-collage > figure:nth-child(n) { grid-column: span 1; }
+  .physcomp-article .itp-post > .robot-collage > figure:last-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+}

@@ -1182,6 +1182,157 @@
           ]
         }
       ]
+    },
+    {
+      "course": "physical-computing",
+      "slug": "robots",
+      "title": "Robots",
+      "date": "2026-10-20",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For my midterm, I decided to use an SO-101 follower arm, which is an open standard for cheap robots produced by Hugging Face."
+        },
+        {
+          "type": "paragraph",
+          "text": "All of the .stl (3D printer) files are open source, but everything else, from the code to what sensors to use or not use, is up to interpretation of the robot user. This is where I come in!"
+        },
+        {
+          "type": "paragraph",
+          "text": "This week, I went ahead and printed the parts and got the various necessary materials to get the basic functionality of the robot: 6 servos, a bus servo adapter, and the power supply adapter."
+        },
+        {
+          "type": "paragraph",
+          "text": "The goal for the project is to use computer vision as well as FSRs, the idea being to create an “emotionally” intelligent robot that responds to human feeling and reacts appropriately."
+        },
+        {
+          "type": "image-grid",
+          "layout": "robot-collage",
+          "images": [
+            {
+              "type": "image",
+              "src": "/itp/media/robots/01-printed-parts-overview.webp",
+              "alt": "Three groups of black 3D-printed robot arm parts on a workbench.",
+              "width": 1024,
+              "height": 768,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/02-printed-parts-arranged.webp",
+              "alt": "Printed robot arm components arranged on the workbench.",
+              "width": 1024,
+              "height": 768,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/03-gripper-front.webp",
+              "alt": "Front view of the black 3D-printed gripper with two jaws.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/04-gripper-side.webp",
+              "alt": "Side view of the printed gripper assembly.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/05-servo-bracket.webp",
+              "alt": "Black 3D-printed bracket with mounting holes.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/06-removing-print-supports.webp",
+              "alt": "Removing support material from a printed robot component with a hand tool.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/07-arm-joint.webp",
+              "alt": "Printed arm joint showing its mounting openings and supports.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/08-base-from-above.webp",
+              "alt": "Top view of the robot base surrounded by lattice print supports.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/09-base-front.webp",
+              "alt": "Front view of the robot base and its mounting bracket.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/10-base-side.webp",
+              "alt": "Side view of the robot base with detached support pieces nearby.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/11-base-rear.webp",
+              "alt": "Rear view of the printed robot base.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/12-base-supports.webp",
+              "alt": "Underside of a printed component with its support structures still attached.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/13-gripper-in-hand.webp",
+              "alt": "Holding a printed gripper component to show its shape and mounting holes.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/14-gripper-profile.webp",
+              "alt": "Side profile of a printed robot gripper.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            },
+            {
+              "type": "image",
+              "src": "/itp/media/robots/15-gripper-angled.webp",
+              "alt": "Angled view of the gripper and its open jaws.",
+              "width": 768,
+              "height": 1024,
+              "zoom": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
