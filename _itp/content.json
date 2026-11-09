@@ -1333,6 +1333,19 @@
           ]
         }
       ]
+    },
+    {
+      "course": "hypercinema",
+      "slug": "interactivity",
+      "title": "Interactivity",
+      "date": "2026-11-09",
+      "published": true,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I see interactivity as one of the best ways to connect an artist or designer's vision and thoughts with other people. Done well, it can create far more understanding than a static, non-dynamic system."
+        }
+      ]
     }
   ]
 }
