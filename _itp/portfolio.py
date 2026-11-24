@@ -25,14 +25,14 @@ def render_portfolio(post, path, marker):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="referrer" content="no-referrer">
-  <title>Ambition - Avinash Krishna</title>
+  <title>{escape(post["title"])} - Avinash Krishna</title>
   <link rel="canonical" href="https://avikrishna.com{path.rstrip('/')}">
-  <link rel="stylesheet" href="{path}ambition.css">
+  <link rel="stylesheet" href="{path}{post["slug"]}.css">
 {preloads}
-  <script src="{path}ambition.js" defer></script>
+  <script src="{path}{post["slug"]}.js" defer></script>
 </head>
 <body>
-  <main><h1>Ambition</h1>{sections}</main>
+  <main><h1>{escape(post["title"])}</h1>{sections}</main>
   <dialog class="viewer" aria-label="Enlarged photograph">
     <button class="close" aria-label="Close enlarged photograph" autofocus><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
     <button class="previous" aria-label="Previous photograph"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
