@@ -140,6 +140,8 @@ def page(title, path, content, back_href='/', back_label='homepage', post=False,
 
 
 def post_path(post):
+    if post.get('presentation') == 'portfolio':
+        return f'/{post["slug"]}/'
     return f'/itp/{post["course"]}/{post["slug"]}/'
 
 
@@ -187,9 +189,11 @@ def render(data):
         if p.get('presentation') == 'portfolio':
             target = post_path(p)
             pages[target.lstrip('/') + 'index.html'] = render_portfolio(p, target, MARKER)
+            old_paths = [f'/itp/{p["course"]}/{p["slug"]}/']
             for old_slug in p.get('legacy_slugs', []):
                 slug(old_slug)
-                old_path = f'/itp/{p["course"]}/{old_slug}/'
+                old_paths.append(f'/itp/{p["course"]}/{old_slug}/')
+            for old_path in old_paths:
                 redirect = (f'<!DOCTYPE html>\n{MARKER}\n<html lang="en">\n<head>\n'
                             f'  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n'
                             f'  <meta name="robots" content="noindex, nofollow, noarchive">\n  <meta name="referrer" content="no-referrer">\n'
@@ -244,3 +248,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
