@@ -955,8 +955,8 @@
     },
     {
       "course": "introduction-to-fabrication",
-      "slug": "ambition",
-      "title": "Ambition",
+      "slug": "portfolio",
+      "title": "Portfolio",
       "date": "2026-10-15",
       "published": true,
       "presentation": "portfolio",
@@ -1181,6 +1181,9 @@
             }
           ]
         }
+      ],
+      "legacy_slugs": [
+        "ambition"
       ]
     },
     {
