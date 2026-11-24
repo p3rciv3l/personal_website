@@ -185,7 +185,19 @@ def render(data):
         pages[f'itp/{c["slug"]}/index.html'] = page(c['title'], f'/itp/{c["slug"]}/', content, '/itp/', 'ITP')
     for p in posts:
         if p.get('presentation') == 'portfolio':
-            pages[post_path(p).lstrip('/') + 'index.html'] = render_portfolio(p, post_path(p), MARKER)
+            target = post_path(p)
+            pages[target.lstrip('/') + 'index.html'] = render_portfolio(p, target, MARKER)
+            for old_slug in p.get('legacy_slugs', []):
+                slug(old_slug)
+                old_path = f'/itp/{p["course"]}/{old_slug}/'
+                redirect = (f'<!DOCTYPE html>\n{MARKER}\n<html lang="en">\n<head>\n'
+                            f'  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n'
+                            f'  <meta name="robots" content="noindex, nofollow, noarchive">\n  <meta name="referrer" content="no-referrer">\n'
+                            f'  <link rel="canonical" href="https://avikrishna.com{target}">\n'
+                            f'  <meta http-equiv="refresh" content="0; url={target}">\n'
+                            f'  <title>{e(p["title"])} - Avinash Krishna</title>\n</head>\n'
+                            f'<body><p>This page moved to <a href="{target}">{e(p["title"])}</a>.</p></body>\n</html>\n')
+                pages[old_path.lstrip('/') + 'index.html'] = redirect
             continue
         c = courses[p['course']]
         summary = f'<p>{e(p["summary"])}</p>' if p.get('summary') else ''
